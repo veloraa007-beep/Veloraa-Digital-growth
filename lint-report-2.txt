@@ -1,0 +1,17 @@
+﻿
+> veloraa@0.1.0 lint
+> eslint
+
+
+C:\Users\Dhanush Gangadhar\Desktop\veloraa\src\app\contact\page.tsx
+  6:10  warning  'motion' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Dhanush Gangadhar\Desktop\veloraa\src\components\case-study.tsx
+  60:56  error  Parsing error: JSX element 'GlassCard' has no corresponding closing tag
+
+C:\Users\Dhanush Gangadhar\Desktop\veloraa\src\components\founder-section.tsx
+  41:35  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  41:60  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+Γ£û 4 problems (3 errors, 1 warning)
+

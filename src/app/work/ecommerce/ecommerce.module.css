@@ -1,0 +1,377 @@
+/* Ecommerce Concept - Minimalist Fashion */
+
+.container {
+    --bg-dark: #0B0B0F;
+    --text-primary: #E8D8C3;
+    --text-secondary: #CBBBA0;
+    --accent: #D6C2A8;
+    --glass-bg: rgba(232, 216, 195, 0.03);
+    --glass-border: rgba(232, 216, 195, 0.1);
+
+    /* Concept Specific */
+    --shop-bg: #f5f5f5;
+    --shop-text: #000000;
+    --shop-gray: #a0a0a0;
+
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    font-family: var(--font-sans), sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-top: 80px;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+}
+
+.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.heroTitle {
+    font-family: var(--font-serif), serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.heroDesc {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+}
+
+.heroStats {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+    padding-top: 2rem;
+}
+
+.statItem h3 {
+    font-size: 2.5rem;
+    font-family: var(--font-serif);
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.statItem p {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+/* Features */
+.features {
+    padding: 150px 0;
+    background: linear-gradient(to bottom, var(--bg-dark), #101015);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.sectionTitle {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.featureCard {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 3rem 2rem;
+    transition: 0.5s ease;
+}
+
+.featureCard:hover {
+    background: rgba(232, 216, 195, 0.05);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.featureIcon {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.featureTitle {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    font-family: var(--font-serif);
+}
+
+.featureDesc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Showcase - Fashion Grid */
+.showcase {
+    padding: 0 0 150px;
+}
+
+.showcaseImage {
+    width: 100%;
+    min-height: 700px;
+    background: #e0e0e0;
+    border: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+    color: var(--shop-text);
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    padding: 40px;
+}
+
+.shopContainer {
+    background: var(--shop-bg);
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Shop Nav */
+.shopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.navLinks {
+    display: flex;
+    gap: 3rem;
+}
+
+.logoBox {
+    border: 1px solid #000;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.05em;
+}
+
+/* Shop Hero */
+.shopHero {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    z-index: 10;
+}
+
+.shopHero h2 {
+    font-size: 4rem;
+    line-height: 0.9;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+/* Editorial Grid */
+.editorialGrid {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.gridCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+}
+
+.imgNumber {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.imgFrame {
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.imgFrame:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.fakeImg {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background Texture Text */
+.bgText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15rem;
+    font-weight: 900;
+    color: #f0f0f0;
+    z-index: 1;
+    white-space: nowrap;
+    opacity: 0.5;
+}
+
+/* Footer */
+.shopFooter {
+    margin-top: auto;
+    padding: 2rem 4rem;
+    z-index: 10;
+}
+
+.footerName {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.footerLine {
+    height: 2px;
+    background: #000;
+    width: 100%;
+}
+
+/* Template Link */
+.templateLinkContainer {
+    position: absolute;
+    bottom: 1rem;
+    right: 4rem;
+    z-index: 20;
+}
+
+.templateLink {
+    color: #999;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px dotted #999;
+    transition: 0.3s;
+}
+
+.templateLink:hover {
+    color: #000;
+    border-bottom-style: solid;
+}
+
+/* CTA */
+.cta {
+    padding: 150px 0;
+    text-align: center;
+    border-top: 1px solid var(--glass-border);
+}
+
+.ctaTitle {
+    font-size: 4rem;
+    font-family: var(--font-serif);
+    margin-bottom: 2rem;
+}
+
+.btnPrimary {
+    padding: 1.2rem 3rem;
+    background: var(--accent);
+    color: var(--bg-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btnPrimary:hover {
+    background: var(--text-primary);
+    transform: scale(1.02);
+}
+
+/* Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 1000px) {
+    .editorialGrid {
+        flex-wrap: wrap;
+    }
+
+    .gridCol {
+        width: 45%;
+        margin-top: 2rem !important;
+    }
+
+    .bgText {
+        font-size: 8rem;
+    }
+}

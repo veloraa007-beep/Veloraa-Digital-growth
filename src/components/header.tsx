@@ -1,0 +1,191 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import { cn } from "@/lib/utils";
+
+const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Work", href: "/work" },
+    { name: "Pricing", href: "/pricing" },
+];
+
+export default function Header() {
+    const { scrollY } = useScroll();
+    const pathname = usePathname();
+    const [scrolled, setScrolled] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        setScrolled(latest > 20);
+    });
+
+    // Close mobile menu on route change
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setMobileMenuOpen(false);
+        }
+    }, [pathname, mobileMenuOpen]);
+
+    return (
+        <>
+            <motion.header
+                className={cn(
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
+                    scrolled
+                        ? "bg-[#0B0B0F]/80 backdrop-blur-xl border-b border-white/5 py-4 md:py-5"
+                        : "bg-transparent py-8 md:py-12"
+                )}
+                initial={{ y: -100 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            >
+                {/* Subtle Radial Glow behind header for depth */}
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(198,169,107,0.06)_0%,transparent_60%)] pointer-events-none -z-10" />
+
+                <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+                    {/* LOGO - Luxury Authority */}
+                    <Link
+                        href="/"
+                        className="z-50 relative group"
+                        onClick={(e) => {
+                            if (pathname === "/") {
+                                e.preventDefault();
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                            }
+                            setMobileMenuOpen(false);
+                        }}
+                    >
+                        <span className="text-xl md:text-3xl font-serif font-medium tracking-[0.15em] text-[#EDE8DC] group-hover:text-accent transition-colors duration-700 drop-shadow-[0_0_15px_rgba(237,232,220,0.15)]">
+                            VELORA
+                        </span>
+                    </Link>
+
+                    {/* DESKTOP NAV - REFINED HIERARCHY */}
+                    <nav className="hidden md:flex items-center gap-16">
+                        {navLinks.map((link) => {
+                            const isActive = pathname === link.href;
+                            return (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className={cn(
+                                        "relative text-[11px] font-medium font-sans tracking-[0.2em] uppercase transition-all duration-500",
+                                        isActive ? "text-white" : "text-white/50 hover:text-white"
+                                    )}
+                                >
+                                    {link.name}
+                                    {isActive && (
+                                        <motion.span
+                                            layoutId="activeNavLine"
+                                            className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-accent"
+                                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                        />
+                                    )}
+                                </Link>
+                            );
+                        })}
+                    </nav>
+
+                    {/* CTA & MOBILE TOGGLE */}
+                    <div className="flex items-center gap-6">
+                        <motion.a
+                            href="https://api.whatsapp.com/send/?phone=919901981097&text&type=phone_number&app_absent=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className={cn(
+                                "hidden md:block px-8 py-3 text-[10px] font-bold font-sans uppercase tracking-[0.25em] transition-all duration-500",
+                                "bg-white/[0.03] backdrop-blur-md border border-white/10 text-[#EDE8DC] hover:border-accent hover:text-accent"
+                            )}
+                        >
+                            Book a Call
+                        </motion.a>
+
+                        {/* MOBILE HAMBURGER - Larger Touch Target */}
+                        <button
+                            className="md:hidden z-50 flex flex-col gap-1.5 p-3 -mr-3 group"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            aria-label="Toggle menu"
+                        >
+                            <motion.span
+                                animate={mobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+                                className="w-6 h-[1px] bg-white block transition-colors group-hover:bg-accent"
+                            />
+                            <motion.span
+                                animate={mobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                                className="w-4 h-[1px] bg-white block ml-auto transition-colors group-hover:bg-accent"
+                            />
+                            <motion.span
+                                animate={mobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+                                className="w-6 h-[1px] bg-white block transition-colors group-hover:bg-accent"
+                            />
+                        </button>
+                    </div>
+                </div>
+            </motion.header>
+
+            {/* MOBILE MENU OVERLAY - LUXURY DISCLOSURE */}
+            <AnimatePresence>
+                {mobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0, transition: { delay: 0.2 } }}
+                        className="fixed inset-0 z-40 bg-[#0A0A0E] flex flex-col items-center justify-center md:hidden"
+                    >
+                        {/* Background Grain */}
+                        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
+
+                        <nav className="flex flex-col items-center gap-8 relative z-10 w-full px-8">
+                            {navLinks.map((link, i) => (
+                                <motion.div
+                                    key={link.name}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 10 }}
+                                    transition={{ delay: 0.1 + i * 0.05, ease: [0.22, 1, 0.36, 1], duration: 0.8 }}
+                                    className="w-full text-center border-b border-white/[0.03] pb-6 last:border-none"
+                                >
+                                    <Link
+                                        href={link.href}
+                                        className={cn(
+                                            "text-4xl font-serif transition-all duration-500 block",
+                                            pathname === link.href ? "text-accent italic" : "text-white/60 hover:text-white"
+                                        )}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </nav>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ delay: 0.5, ease: "easeOut" }}
+                            className="mt-12 relative z-10 w-full px-8 max-w-sm"
+                        >
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=919901981097&text&type=phone_number&app_absent=0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="border border-accent/30 text-accent px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-accent hover:text-black transition-all duration-500 w-full block text-center"
+                            >
+                                Book Strategy Call
+                            </a>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
+    );
+}
