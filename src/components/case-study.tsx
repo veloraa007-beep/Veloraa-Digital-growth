@@ -4,15 +4,15 @@
 
 export default function CaseStudy() {
     return (
-        <section className="py-40 px-6 max-w-7xl mx-auto">
-            <div className="text-center mb-24">
-                <h2 className="text-5xl md:text-7xl font-serif text-primary mb-6 font-light tracking-tight">Proof of Work</h2>
+        <section className="py-24 md:py-40 px-5 md:px-6 max-w-7xl mx-auto">
+            <div className="text-center mb-16 md:mb-24">
+                <h2 className="text-[var(--font-h2)] font-serif text-primary mb-6 font-light tracking-tight">Proof of Work</h2>
                 <p className="text-secondary/70 uppercase tracking-[0.3em] text-xs font-bold">Real Results. No Hype.</p>
             </div>
 
             {/* CINEMATIC FULL-WIDTH LAYOUT */}
             <div
-                className="relative bg-gradient-to-br from-white/[0.02] to-transparent rounded-2xl p-12 md:p-20 overflow-hidden"
+                className="relative bg-gradient-to-br from-white/[0.02] to-transparent rounded-2xl p-6 md:p-20 overflow-hidden"
                 style={{
                     boxShadow: '0 20px 80px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.03)'
                 }}

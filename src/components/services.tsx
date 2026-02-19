@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
-import Image from "next/image"; // Added for images
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -75,14 +75,15 @@ export default function Services() {
         const ctx = gsap.context(() => {
             const items = gsap.utils.toArray<HTMLElement>(".service-item");
 
-            items.forEach((item) => {
+            items.forEach((item, i) => {
                 gsap.from(item, {
                     y: 50,
                     opacity: 0,
-                    duration: 1,
+                    duration: 0.8,
+                    delay: i * 0.1, // Stagger effect
                     scrollTrigger: {
                         trigger: item,
-                        start: "top 85%",
+                        start: "top 90%",
                         toggleActions: "play none none reverse",
                     },
                 });
@@ -95,16 +96,16 @@ export default function Services() {
     return (
         <section
             ref={containerRef}
-            className="py-24 md:py-32 bg-background relative overflow-hidden"
+            className="py-20 md:py-32 bg-background relative overflow-hidden"
         >
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="w-[90%] md:max-w-[1200px] mx-auto">
                 {/* Section Header */}
-                <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-16 md:mb-24 gap-8">
                     <div>
                         <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/80 border border-accent/20 px-4 py-2 rounded-full mb-8 inline-block backdrop-blur-sm bg-accent/[0.05]">
                             Our Expertise
                         </span>
-                        <h2 className="text-5xl md:text-7xl font-serif text-primary leading-[0.9] tracking-tight">
+                        <h2 className="text-[var(--font-h2)] font-serif text-primary leading-[0.9] tracking-tight">
                             Engineered for <br />
                             <span className="text-secondary/60 italic font-light">
                                 Dominance
@@ -112,64 +113,60 @@ export default function Services() {
                         </h2>
                     </div>
                     <div className="max-w-md">
-                        <p className="text-secondary text-lg leading-relaxed font-light tracking-wide">
+                        <p className="text-secondary text-base md:text-lg leading-relaxed font-light tracking-wide">
                             Comprehensive digital solutions that bridge the gap between
                             aesthetic luxury and technical performance.
                         </p>
                     </div>
                 </div>
 
-                {/* Service List */}
-                <div className="flex flex-col gap-8">
+                {/* Service Grid - Updated from List */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {services.map((service, index) => (
                         <Link
                             key={index}
                             href={service.link}
-                            className="service-item group relative border border-white/5 bg-surface overflow-hidden hover:border-accent/50 transition-colors duration-500 block"
+                            className="service-item group relative border border-white/5 bg-surface overflow-hidden hover:border-accent/50 transition-colors duration-500 block h-full flex flex-col"
                         >
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-8 items-center">
+                            {/* Image Section */}
+                            <div className="h-48 md:h-64 relative overflow-hidden w-full">
+                                <Image
+                                    src={service.image}
+                                    alt={service.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-90" />
+                            </div>
 
-                                {/* Image Section - Visible on all devices, large on desktop */}
-                                <div className="md:col-span-5 h-64 md:h-full min-h-[250px] relative overflow-hidden">
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-r from-surface/0 via-surface/0 to-surface/0 md:from-transparent md:to-surface" />
-                                    {/* Gradient for smooth blend if needed, or keeping crisp */}
+                            {/* Content Section */}
+                            <div className="p-6 md:p-8 flex flex-col flex-grow relative z-10 -mt-12">
+                                <div className="flex justify-between items-start mb-4">
+                                    <span className="text-[10px] font-sans font-medium text-secondary/40 tracking-[0.2em] bg-surface/80 backdrop-blur-sm px-2 py-1 rounded">
+                                        ({service.id})
+                                    </span>
+                                    <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-300 transform group-hover:-rotate-45 bg-surface/80 backdrop-blur-sm">
+                                        <ArrowUpRight className="w-3 h-3 text-white group-hover:text-black" />
+                                    </div>
                                 </div>
 
-                                {/* Content Section */}
-                                <div className="md:col-span-7 p-8 md:py-16 md:pr-16 flex flex-col justify-center">
-                                    <div className="flex justify-between items-start mb-6">
-                                        <span className="text-xs font-sans font-medium text-secondary/40 tracking-[0.2em]">
-                                            ({service.id})
+                                <h3 className="text-2xl md:text-3xl font-serif text-primary group-hover:text-accent transition-colors duration-300 font-normal mb-3">
+                                    {service.title}
+                                </h3>
+
+                                <p className="text-secondary/80 text-sm leading-relaxed mb-6 font-light tracking-wide flex-grow">
+                                    {service.description}
+                                </p>
+
+                                <div className="flex flex-wrap gap-2 mt-auto">
+                                    {service.tags.map((tag, t) => (
+                                        <span
+                                            key={t}
+                                            className="text-[9px] font-sans uppercase tracking-[0.15em] border border-white/5 px-2 py-1 rounded-full text-secondary/60 group-hover:border-white/10 transition-colors"
+                                        >
+                                            {tag}
                                         </span>
-                                        <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-300 transform group-hover:-rotate-45">
-                                            <ArrowUpRight className="w-4 h-4 text-white group-hover:text-black" />
-                                        </div>
-                                    </div>
-
-                                    <h3 className="text-3xl md:text-4xl font-serif text-primary group-hover:text-accent transition-colors duration-300 font-normal mb-4">
-                                        {service.title}
-                                    </h3>
-
-                                    <p className="text-secondary/80 leading-relaxed mb-6 font-light tracking-wide max-w-xl">
-                                        {service.description}
-                                    </p>
-
-                                    <div className="flex flex-wrap gap-2">
-                                        {service.tags.map((tag, t) => (
-                                            <span
-                                                key={t}
-                                                className="text-[10px] font-sans uppercase tracking-[0.15em] border border-white/5 px-3 py-1.5 rounded-full text-secondary/60 group-hover:border-white/10 transition-colors"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                         </Link>
