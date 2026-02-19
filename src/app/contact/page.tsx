@@ -2,22 +2,10 @@
 
 import Link from "next/link";
 import { ArrowLeft, MessageCircle, Mail } from "lucide-react";
-import BackgroundSlideshow from "@/components/ui/background-slideshow";
 
 export default function Contact() {
     return (
         <main className="min-h-screen bg-background pt-32 pb-24 px-6 md:px-12 relative overflow-hidden flex flex-col justify-center">
-            {/* Background Slideshow */}
-            <BackgroundSlideshow
-                images={[
-                    "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2672&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=2670&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop"
-                ]}
-                duration={6}
-                overlayOpacity={0.8}
-            />
-
             {/* Background Effects */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />

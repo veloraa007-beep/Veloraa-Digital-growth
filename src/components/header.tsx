@@ -138,53 +138,51 @@ export default function Header() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0, transition: { delay: 0.2 } }}
-                        className="fixed inset-0 z-40 bg-[#0A0A0E] md:hidden overflow-y-auto"
+                        className="fixed inset-0 z-40 bg-[#0A0A0E] flex flex-col items-center justify-center md:hidden"
                     >
-                        <div className="min-h-full flex flex-col items-center justify-center py-24 px-6 relative">
-                            {/* Background Grain */}
-                            <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay fixed" />
+                        {/* Background Grain */}
+                        <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
 
-                            <nav className="flex flex-col items-center gap-8 relative z-10 w-full px-4">
-                                {navLinks.map((link, i) => (
-                                    <motion.div
-                                        key={link.name}
-                                        initial={{ opacity: 0, y: 30 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: 10 }}
-                                        transition={{ delay: 0.1 + i * 0.05, ease: [0.22, 1, 0.36, 1], duration: 0.8 }}
-                                        className="w-full text-center border-b border-white/[0.03] pb-6 last:border-none"
-                                    >
-                                        <Link
-                                            href={link.href}
-                                            className={cn(
-                                                "text-4xl font-serif transition-all duration-500 block",
-                                                pathname === link.href ? "text-accent italic" : "text-white/60 hover:text-white"
-                                            )}
-                                            onClick={() => setMobileMenuOpen(false)}
-                                        >
-                                            {link.name}
-                                        </Link>
-                                    </motion.div>
-                                ))}
-                            </nav>
-
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ delay: 0.5, ease: "easeOut" }}
-                                className="mt-12 relative z-10 w-full px-4 max-w-sm"
-                            >
-                                <a
-                                    href="https://api.whatsapp.com/send/?phone=919901981097&text&type=phone_number&app_absent=0"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="border border-accent/30 text-accent px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-accent hover:text-black transition-all duration-500 w-full block text-center"
+                        <nav className="flex flex-col items-center gap-8 relative z-10 w-full px-8">
+                            {navLinks.map((link, i) => (
+                                <motion.div
+                                    key={link.name}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 10 }}
+                                    transition={{ delay: 0.1 + i * 0.05, ease: [0.22, 1, 0.36, 1], duration: 0.8 }}
+                                    className="w-full text-center border-b border-white/[0.03] pb-6 last:border-none"
                                 >
-                                    Book Strategy Call
-                                </a>
-                            </motion.div>
-                        </div>
+                                    <Link
+                                        href={link.href}
+                                        className={cn(
+                                            "text-4xl font-serif transition-all duration-500 block",
+                                            pathname === link.href ? "text-accent italic" : "text-white/60 hover:text-white"
+                                        )}
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {link.name}
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </nav>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ delay: 0.5, ease: "easeOut" }}
+                            className="mt-12 relative z-10 w-full px-8 max-w-sm"
+                        >
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=919901981097&text&type=phone_number&app_absent=0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="border border-accent/30 text-accent px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-accent hover:text-black transition-all duration-500 w-full block text-center"
+                            >
+                                Book Strategy Call
+                            </a>
+                        </motion.div>
                     </motion.div>
                 )}
             </AnimatePresence>

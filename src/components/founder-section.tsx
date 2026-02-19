@@ -4,12 +4,12 @@ import MagneticButton from "./ui/magnetic-button";
 
 export default function FounderSection() {
     return (
-        <section className="py-24 md:py-32 px-5 md:px-6 max-w-7xl mx-auto">
+        <section className="py-32 px-6 max-w-7xl mx-auto">
             <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
                 <div className="grid grid-cols-1 md:grid-cols-2">
 
                     {/* Visual Side - Abstract/Dark */}
-                    <div className="relative min-h-[400px] md:min-h-[500px] bg-neutral-900 group overflow-hidden flex flex-col items-center justify-center p-8 md:p-12 text-center">
+                    <div className="relative min-h-[500px] bg-neutral-900 group overflow-hidden flex flex-col items-center justify-center p-12 text-center">
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10" />
 
                         <h3 className="text-3xl font-serif text-white mb-6 relative z-20">&quot;The Gap&quot;</h3>
@@ -24,7 +24,7 @@ export default function FounderSection() {
                     </div>
 
                     {/* Content Side */}
-                    <div className="p-8 md:p-20 flex flex-col justify-center bg-black/40 backdrop-blur-sm">
+                    <div className="p-12 md:p-20 flex flex-col justify-center bg-black/40 backdrop-blur-sm">
                         <div className="mb-8">
                             <span className="text-gold uppercase tracking-[0.2em] text-xs font-bold block mb-2">The Vision</span>
                             <h2 className="text-4xl md:text-5xl font-serif text-white mb-4">Authority & Scale</h2>
