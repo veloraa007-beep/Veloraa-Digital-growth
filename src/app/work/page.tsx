@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./work.module.css";
+import BackgroundSlideshow from "@/components/ui/background-slideshow";
 
 // Projects Data
 const projects = [
@@ -81,6 +82,16 @@ export default function WorkPage() {
 
     return (
         <main className={styles.container} ref={scrollRef}>
+            <BackgroundSlideshow
+                images={[
+                    "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2670&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1486406140926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2670&auto=format&fit=crop"
+                ]}
+                duration={7}
+                overlayOpacity={0.85}
+            />
+
             {/* 1. Hero Section */}
             <section className={styles.hero}>
                 <div className={`${styles.wrapper} ${styles.heroContent}`}>

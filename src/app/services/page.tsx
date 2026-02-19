@@ -2,43 +2,60 @@
 
 import { motion } from "framer-motion";
 import GlassCard from "@/components/ui/glass-card";
+import Link from "next/link";
+import BackgroundSlideshow from "@/components/ui/background-slideshow";
 
 const services = [
     {
         title: "Premium Websites",
         desc: "High-performance, visually stunning websites built on Next.js.",
         for: "Brands seeking authority.",
+        link: "/services/premium-websites"
     },
     {
         title: "WhatsApp Automation",
         desc: "Automated customer flows, abandoned cart recovery, and support bots.",
         for: "Businesses needing efficiency.",
+        link: "/services/whatsapp-automation"
     },
     {
         title: "Lead Funnels",
         desc: "Optimized landing pages designed to convert traffic into qualified leads.",
         for: "Aggressive growth goals.",
+        link: "/services/lead-funnels"
     },
     {
         title: "SEO Optimization",
         desc: "Technical and content SEO to dominate local search rankings.",
         for: "Long-term organic traffic.",
+        link: "/services/seo-optimization"
     },
     {
         title: "Digital Identity",
         desc: "Logo design, color psychology, and brand voice development.",
         for: "New or rebranding businesses.",
+        link: "/services/digital-identity"
     },
     {
         title: "NFC Business Cards",
         desc: "Physical-to-digital bridge for seamless contact sharing.",
         for: "Networking professionals.",
+        link: "/services/business-cards"
     }
 ];
 
 export default function ServicesPage() {
     return (
-        <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto relative">
+            <BackgroundSlideshow
+                images={[
+                    "https://images.unsplash.com/photo-1620641788421-7f1c33b1d9c6?q=80&w=2546&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop"
+                ]}
+                duration={5}
+                overlayOpacity={0.7}
+            />
             {/* HERO */}
             <section className="text-center mb-24">
                 <motion.h1
@@ -54,18 +71,20 @@ export default function ServicesPage() {
             {/* SERVICES GRID */}
             <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
                 {services.map((service, index) => (
-                    <GlassCard key={index} className="p-8 flex flex-col" hoverEffect={true}>
-                        <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-gold font-serif text-xl">
-                            {index + 1}
-                        </div>
-                        <h3 className="text-2xl text-white font-serif mb-4">{service.title}</h3>
-                        <p className="text-white/60 mb-6 flex-grow">{service.desc}</p>
+                    <Link key={index} href={service.link} className="block h-full">
+                        <GlassCard className="p-8 flex flex-col h-full" hoverEffect={true}>
+                            <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 text-gold font-serif text-xl">
+                                {index + 1}
+                            </div>
+                            <h3 className="text-2xl text-white font-serif mb-4">{service.title}</h3>
+                            <p className="text-white/60 mb-6 flex-grow">{service.desc}</p>
 
-                        <div className="border-t border-white/10 pt-4 mt-auto">
-                            <span className="text-xs text-white/30 uppercase tracking-widest block mb-2">Best For</span>
-                            <span className="text-sm text-white/80">{service.for}</span>
-                        </div>
-                    </GlassCard>
+                            <div className="border-t border-white/10 pt-4 mt-auto">
+                                <span className="text-xs text-white/30 uppercase tracking-widest block mb-2">Best For</span>
+                                <span className="text-sm text-white/80">{service.for}</span>
+                            </div>
+                        </GlassCard>
+                    </Link>
                 ))}
             </section>
 

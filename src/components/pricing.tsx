@@ -56,7 +56,7 @@ const plans = [
 
 export default function Pricing() {
     return (
-        <section className="py-24 px-4 md:px-12 max-w-7xl mx-auto relative z-10">
+        <section className="py-24 px-5 md:px-12 max-w-7xl mx-auto relative z-10">
             {/* Background elements */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 blur-[120px] rounded-full pointer-events-none -z-10" />
 
