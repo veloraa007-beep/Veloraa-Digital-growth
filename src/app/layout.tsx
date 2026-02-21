@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
@@ -23,6 +23,11 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "VELORA | Digital Systems Architecture",
@@ -49,12 +54,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black bg-background text-primary`}
+        className={`${inter.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black bg-background text-primary overflow-x-hidden`}
       >
         <SmoothScroll>
           {/* <CustomCursor /> Removed for V2 "Restraint" */}
           <Header />
-          {children}
+          <div className="min-h-screen w-full">
+            {children}
+          </div>
           <FloatingWhatsApp />
           <Footer />
         </SmoothScroll>

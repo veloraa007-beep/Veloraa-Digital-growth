@@ -61,7 +61,7 @@ export default function ServicesPage() {
                 <motion.h1
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="text-5xl md:text-7xl font-serif text-white mb-6"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif text-white mb-6"
                 >
                     Complete Digital<br /><span className="text-gold">Systems</span>
                 </motion.h1>

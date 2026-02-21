@@ -99,7 +99,7 @@ export default function Hero() {
                         <MagneticButton
                             className="w-full md:min-w-[200px] max-w-[320px] px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-[0.2em] text-xs hover:border-[#C6A76E] hover:text-[#C6A76E] transition-colors duration-300 bg-transparent"
                         >
-                            Book Strategy Call
+                            Initiate Consultation
                         </MagneticButton>
                     </Link>
                 </div>

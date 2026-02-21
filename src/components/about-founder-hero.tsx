@@ -17,7 +17,7 @@ export default function AboutFounderHero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 leading-tight"
                 >
                     Built by a <span className="text-secondary opacity-80 italic">Cybersecurity Mindset.</span>
                 </motion.h1>

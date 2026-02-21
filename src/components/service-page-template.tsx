@@ -68,7 +68,7 @@ export default function ServicePageTemplate({
                     >
                         <motion.h1
                             variants={fadeIn}
-                            className="text-5xl md:text-8xl font-serif text-white mb-6 leading-tight"
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif text-white mb-6 leading-tight"
                         >
                             {title}
                         </motion.h1>
@@ -128,7 +128,7 @@ export default function ServicePageTemplate({
                     <div className="grid md:grid-cols-4 gap-8">
                         {process.map((step, index) => (
                             <div key={index} className="group relative">
-                                <div className="text-6xl font-serif text-white/5 mb-6 group-hover:text-accent/20 transition-colors">
+                                <div className="text-4xl md:text-6xl font-serif text-white/5 mb-6 group-hover:text-accent/20 transition-colors">
                                     {step.number}
                                 </div>
                                 <h3 className="text-xl text-white mb-4">{step.title}</h3>
@@ -148,7 +148,7 @@ export default function ServicePageTemplate({
             <section className="py-32 bg-background text-center px-6 relative overflow-hidden">
                 <div className="absolute inset-0 bg-accent/5 blur-[100px] rounded-full opacity-20 pointer-events-none" />
                 <div className="relative z-10 max-w-3xl mx-auto">
-                    <h2 className="text-4xl md:text-6xl font-serif text-white mb-8">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-8">
                         {ctaTitle}
                     </h2>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6">

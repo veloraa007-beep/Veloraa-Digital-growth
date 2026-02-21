@@ -32,7 +32,7 @@ export default function Contact() {
                     Back to Home
                 </Link>
 
-                <h1 className="text-5xl md:text-8xl font-serif text-primary mb-8 tracking-tight leading-[0.9] font-light">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif text-primary mb-8 tracking-tight leading-[0.9] font-light">
                     Let&apos;s Engineer <br />
                     <span className="text-accent italic font-extralight opacity-80">Dominance.</span>
                 </h1>

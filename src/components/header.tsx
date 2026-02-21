@@ -181,7 +181,7 @@ export default function Header() {
                                     rel="noopener noreferrer"
                                     className="border border-accent/30 text-accent px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-accent hover:text-black transition-all duration-500 w-full block text-center"
                                 >
-                                    Book Strategy Call
+                                    Initiate Consultation
                                 </a>
                             </motion.div>
                         </div>

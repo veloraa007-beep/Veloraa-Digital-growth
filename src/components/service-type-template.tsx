@@ -60,7 +60,7 @@ export default function ServiceTypeTemplate({
 
                         <motion.h1
                             variants={fadeIn}
-                            className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 leading-tight"
                         >
                             {title}
                         </motion.h1>

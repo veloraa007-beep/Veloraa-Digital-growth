@@ -43,7 +43,7 @@ export default function WebHosting() {
                 <div className="flex flex-col md:flex-row items-end justify-between mb-20">
                     <div className="max-w-2xl">
                         <span className="text-accent uppercase tracking-widest text-sm font-bold mb-4 block">Infrastructure</span>
-                        <h2 className="text-4xl md:text-6xl font-serif text-white leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight">
                             Powering Your <br />
                             <span className="text-white/50 italic">Digital Empire</span>
                         </h2>
@@ -65,7 +65,7 @@ export default function WebHosting() {
                         >
                             <GlassCard className="h-full group hover:bg-white/10 transition-colors">
                                 <div className="mb-8">
-                                    <div className="text-5xl font-serif text-accent mb-2">{feature.stat}</div>
+                                    <div className="text-3xl sm:text-4xl md:text-5xl font-serif text-accent mb-2">{feature.stat}</div>
                                     <div className="text-xs uppercase tracking-widest text-white/40">{feature.statLabel}</div>
                                 </div>
                                 <h3 className="text-2xl text-white mb-3">{feature.title}</h3>

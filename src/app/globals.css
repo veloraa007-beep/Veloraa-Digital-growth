@@ -134,6 +134,7 @@ h6 {
   font-weight: 400;
   /* Editorial style usually lighter */
   letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
 .text-label {

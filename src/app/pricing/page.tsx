@@ -29,7 +29,7 @@ export default function PricingPage() {
                 <motion.h1
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="text-5xl md:text-8xl font-serif text-primary mb-8 tracking-tight font-light"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif text-primary mb-8 tracking-tight font-light"
                 >
                     Investment <br /><span className="italic text-secondary/50 font-extralight">Architecture</span>
                 </motion.h1>
@@ -66,7 +66,7 @@ export default function PricingPage() {
                                     Starting From
                                 </p>
 
-                                <p className="text-4xl md:text-5xl font-serif text-white mt-2">
+                                <p className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mt-2">
                                     ₹59,999
                                 </p>
 
