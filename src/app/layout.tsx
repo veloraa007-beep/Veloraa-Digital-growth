@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
 import CustomCursor from "@/components/ui/custom-cursor";
@@ -15,8 +15,8 @@ const inter = Inter({
   display: "swap",
 });
 
-// Editorial Serif for Headlines
-const playfair = Playfair_Display({
+// Editorial Serif for Headlines — Cormorant Garamond
+const playfair = Cormorant_Garamond({
   variable: "--font-playfair",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],

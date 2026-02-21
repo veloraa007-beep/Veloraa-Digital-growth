@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
-/* Luxury Warm Color Palette - Digital Architecture Studio */
-/* Luxury Warm Color Palette - Refined */
+/* Veloraa Permanent Luxury Palette */
 :root {
-  --background: #0B0B0F;
-  /* Deep rich black */
-  --surface: #14141A;
-  /* Slightly lighter surface */
-  --text-primary: #EDE8DC;
-  /* Soft Ivory (Luxury) */
-  --text-secondary: #B9B0A4;
-  /* Muted beige-gray */
-  --text-muted: #8F8578;
-  --accent: #C6A96B;
-  /* Refined Soft Gold */
-  --border: rgba(237, 232, 220, 0.08);
+  --background: #0F1113;
+  /* Charcoal Black – Deep Infrastructure Black */
+  --surface: #2A2E30;
+  /* Executive Warm Grey – Subtle panels */
+  --forest: #1F3A2D;
+  /* Deep Forest Executive Green – Depth layer */
+  --text-primary: #EAE6DD;
+  /* Warm Ivory – Primary text */
+  --text-secondary: #A8A39B;
+  /* Muted warm grey – Secondary text */
+  --text-muted: #7A756E;
+  --accent: #C2A35D;
+  /* Muted Beige-Gold – Signature accent */
+  --border: rgba(234, 230, 221, 0.08);
   /* Ivory-based border */
 
   /* Fluid Typography - Updated for Luxury Scaling */
@@ -44,6 +45,7 @@ body {
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);
+  --color-forest: var(--forest);
   --color-primary: var(--text-primary);
   --color-secondary: var(--text-secondary);
   --color-muted: var(--text-muted);
@@ -92,14 +94,14 @@ body {
   /* Removed heavy blur for mobile performance */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(232, 216, 195, 0.05);
+  border-bottom: 1px solid rgba(234, 230, 221, 0.05);
 }
 
 @media (max-width: 768px) {
   .glass {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    background: rgba(11, 11, 15, 0.9);
+    background: rgba(15, 17, 19, 0.9);
   }
 }
 
@@ -202,4 +204,61 @@ h6 {
 
 .marquee-track {
   animation: marquee-scroll 30s linear infinite;
+}
+
+/* ─── Grain Overlay (Architectural Texture) ─── */
+.grain-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+/* ─── Gold Accent Line Drift ─── */
+@keyframes gold-line-drift {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+}
+
+.gold-line-animated {
+  animation: gold-line-drift 8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+/* ─── Slow Gradient Mask ─── */
+@keyframes gradient-drift {
+
+  0%,
+  100% {
+    opacity: 0.04;
+    transform: scale(1) translate(0, 0);
+  }
+
+  50% {
+    opacity: 0.07;
+    transform: scale(1.05) translate(2%, -1%);
+  }
+}
+
+.gradient-mask-slow {
+  animation: gradient-drift 12s ease-in-out infinite;
 }

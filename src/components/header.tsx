@@ -38,7 +38,7 @@ export default function Header() {
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-700",
                     scrolled
-                        ? "bg-[#0B0B0F]/80 backdrop-blur-xl border-b border-white/5 py-4 md:py-5"
+                        ? "bg-[#0F1113]/80 backdrop-blur-xl border-b border-white/5 py-4 md:py-5"
                         : "bg-transparent py-8 md:py-12"
                 )}
                 initial={{ y: -100 }}
@@ -46,7 +46,7 @@ export default function Header() {
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             >
                 {/* Subtle Radial Glow behind header for depth */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(198,169,107,0.06)_0%,transparent_60%)] pointer-events-none -z-10" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(194,163,93,0.06)_0%,transparent_60%)] pointer-events-none -z-10" />
 
                 <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
                     {/* LOGO - Luxury Authority */}
@@ -61,7 +61,7 @@ export default function Header() {
                             setMobileMenuOpen(false);
                         }}
                     >
-                        <span className="text-xl md:text-3xl font-serif font-medium tracking-[0.15em] text-[#EDE8DC] group-hover:text-accent transition-colors duration-700 drop-shadow-[0_0_15px_rgba(237,232,220,0.15)]">
+                        <span className="text-xl md:text-3xl font-serif font-medium tracking-[0.15em] text-[#EAE6DD] group-hover:text-accent transition-colors duration-700 drop-shadow-[0_0_15px_rgba(234,230,221,0.15)]">
                             VELORA
                         </span>
                     </Link>
@@ -102,7 +102,7 @@ export default function Header() {
                             whileTap={{ scale: 0.98 }}
                             className={cn(
                                 "hidden md:block px-8 py-3 text-[10px] font-bold font-sans uppercase tracking-[0.25em] transition-all duration-500",
-                                "bg-white/[0.03] backdrop-blur-md border border-white/10 text-[#EDE8DC] hover:border-accent hover:text-accent"
+                                "bg-white/[0.03] backdrop-blur-md border border-white/10 text-[#EAE6DD] hover:border-accent hover:text-accent"
                             )}
                         >
                             Book a Call

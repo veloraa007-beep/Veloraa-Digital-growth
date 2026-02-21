@@ -1,12 +1,12 @@
 /* Agency Concept - Futuristic Growth */
 
 .container {
-    --bg-dark: #0B0B0F;
+    --bg-dark: #0F1113;
     --text-primary: #E8D8C3;
     --text-secondary: #CBBBA0;
     --accent: #D6C2A8;
-    --glass-bg: rgba(232, 216, 195, 0.03);
-    --glass-border: rgba(232, 216, 195, 0.1);
+    --glass-bg: rgba(234, 230, 221, 0.03);
+    --glass-border: rgba(234, 230, 221, 0.1);
 
     /* Concept Specific */
     --agency-bg: #050a05;

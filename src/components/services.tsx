@@ -103,15 +103,15 @@ export default function Services() {
                         <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-[#C6A76E]/80 border border-[#C6A76E]/20 px-4 py-2 rounded-full mb-8 inline-block backdrop-blur-sm bg-[#C6A76E]/[0.05]">
                             Our Expertise
                         </span>
-                        <h2 className="text-[clamp(1.8rem,4vw,3.5rem)] font-serif text-[#EDE8DC] leading-[0.9] tracking-tight">
+                        <h2 className="text-[clamp(1.8rem,4vw,3.5rem)] font-serif text-[#EAE6DD] leading-[0.9] tracking-tight">
                             Engineered for <br />
-                            <span className="text-[#B9B0A4]/60 italic font-light">
+                            <span className="text-[#A8A39B]/60 italic font-light">
                                 Dominance
                             </span>
                         </h2>
                     </div>
                     <div className="max-w-md">
-                        <p className="text-[#B9B0A4] text-base md:text-lg leading-relaxed font-light tracking-wide">
+                        <p className="text-[#A8A39B] text-base md:text-lg leading-relaxed font-light tracking-wide">
                             Comprehensive digital solutions that bridge the gap between
                             aesthetic luxury and technical performance.
                         </p>
