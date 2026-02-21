@@ -188,3 +188,18 @@ h6 {
 .animate-float-slower {
   animation: float-slower 12s ease-in-out infinite;
 }
+
+/* Infrastructure Marquee */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+}
