@@ -45,7 +45,7 @@ export default function WhatsAppAutomationPage() {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-2xl font-serif text-white mb-6">Engagement Power</h2>
                     <p className="text-secondary/60 text-sm mb-8 max-w-2xl mx-auto">
-                        WhatsApp boasts a 98% open rate. See why it's the most powerful marketing channel today.
+                        WhatsApp boasts a 98% open rate. See why it&apos;s the most powerful marketing channel today.
                     </p>
                     <a
                         href="https://www.aisensy.com/blog/whatsapp-marketing-statistics/"

@@ -1,5 +1,5 @@
 import ServicePageTemplate from "@/components/service-page-template";
-import Link from "next/link";
+import ServiceCard from "@/components/service-card";
 import Image from "next/image";
 
 export default function PremiumWebsitesPage() {
@@ -46,46 +46,53 @@ export default function PremiumWebsitesPage() {
             <section className="py-20 bg-black/50 border-t border-white/5">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl font-serif text-white mb-12 text-center">Explore Website Types</h2>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                         {[
                             {
                                 title: "Authority Websites",
-                                desc: "For Brands, Agencies, Professionals.",
+                                description: "For Brands, Agencies, Professionals.",
                                 link: "/services/premium-websites/authority",
-                                image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2574&auto=format&fit=crop"
+                                image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2574&auto=format&fit=crop",
+                                tags: ["Brand", "Authority"]
                             },
                             {
                                 title: "Conversion Websites",
-                                desc: "For Coaches, Local Businesses, Real Estate.",
+                                description: "For Coaches, Local Businesses, Real Estate.",
                                 link: "/services/premium-websites/conversion",
-                                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
+                                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
+                                tags: ["Sales", "Growth"]
                             },
                             {
                                 title: "E-commerce Websites",
-                                desc: "For D2C Brands & Product Businesses.",
+                                description: "For D2C Brands & Product Businesses.",
                                 link: "/services/premium-websites/ecommerce",
-                                image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2574&auto=format&fit=crop"
+                                image: "https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?q=80&w=2670&auto=format&fit=crop",
+                                tags: ["Shop", "Scale"]
                             },
                             {
                                 title: "Portfolio Sites",
-                                desc: "For Creators & Founders.",
+                                description: "For Creators & Founders.",
                                 link: "/services/premium-websites/portfolio",
-                                image: "https://images.unsplash.com/photo-1545665277-5937bf04499c?q=80&w=2546&auto=format&fit=crop"
+                                image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+                                tags: ["Personal", "Showcase"]
                             },
                             {
                                 title: "Corporate Sites",
-                                desc: "For Established Infrastructure Firms.",
+                                description: "For Established Infrastructure Firms.",
                                 link: "/services/premium-websites/corporate",
-                                image: "https://images.unsplash.com/photo-1486406140926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop"
+                                image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+                                tags: ["Enterprise", "Trust"]
                             }
                         ].map((type, i) => (
-                            <Link key={i} href={type.link} className="group block relative aspect-[4/3] overflow-hidden border border-white/10 bg-surface">
-                                <Image src={type.image} alt={type.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-60 group-hover:opacity-80" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-6 flex flex-col justify-end">
-                                    <h3 className="text-xl font-serif text-white mb-1 group-hover:text-accent transition-colors">{type.title}</h3>
-                                    <p className="text-secondary text-sm">{type.desc}</p>
-                                </div>
-                            </Link>
+                            <ServiceCard
+                                key={i}
+                                title={type.title}
+                                description={type.description}
+                                number={`0${i + 1}`}
+                                tags={type.tags}
+                                image={type.image}
+                                href={type.link}
+                            />
                         ))}
                     </div>
                 </div>
@@ -95,7 +102,7 @@ export default function PremiumWebsitesPage() {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-2xl font-serif text-white mb-6">Global Design Standards</h2>
                     <p className="text-secondary/60 text-sm mb-8 max-w-2xl mx-auto">
-                        We benchmark our work against the world's best. Explore the caliber of design we aspire to and exceed.
+                        We benchmark our work against the world&apos;s best. Explore the caliber of design we aspire to and exceed.
                     </p>
                     <a
                         href="https://dribbble.com/shots/popular/web-design"

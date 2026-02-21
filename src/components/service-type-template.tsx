@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Check, ArrowRight } from "lucide-react";
+import { ArrowLeft, Check } from "lucide-react";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 
 interface ServiceTypeProps {
@@ -84,7 +84,7 @@ export default function ServiceTypeTemplate({
                         </motion.div>
 
                         <motion.div variants={fadeIn} className="mb-12">
-                            <h3 className="text-white font-serif text-xl mb-6">What's Included</h3>
+                            <h3 className="text-white font-serif text-xl mb-6">What&apos;s Included</h3>
                             <ul className="space-y-4">
                                 {features.map((feature, i) => (
                                     <li key={i} className="flex items-start gap-3">

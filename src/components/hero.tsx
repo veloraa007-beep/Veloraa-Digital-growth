@@ -18,34 +18,22 @@ export default function Hero() {
         const ctx = gsap.context(() => {
             const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-            // Word-by-word reveal for ultra luxury feel
-            titleLinesRef.current.forEach((line, index) => {
-                if (line) {
-                    tl.fromTo(
-                        line,
-                        { y: 100, opacity: 0, clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" },
-                        { y: 0, opacity: 1, duration: 1.8, clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)" },
-                        index * 0.3
-                    );
-                }
-            });
-
-            tl.fromTo(
-                subtextRef.current,
-                { y: 30, opacity: 0 },
-                { y: 0, opacity: 1, duration: 1.2 },
-                "-=0.6"
+            // Animate layout elements
+            tl.fromTo(titleLinesRef.current,
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.5, stagger: 0.2 }
             )
-                .fromTo(
-                    ctaRef.current,
+                .fromTo(subtextRef.current,
+                    { y: 30, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 1.2 },
+                    "-=1.0"
+                )
+                .fromTo(ctaRef.current,
                     { y: 20, opacity: 0 },
                     { y: 0, opacity: 1, duration: 1.2 },
                     "-=0.8"
                 );
 
-            // Parallax Effect - Optimized for Performance
-            // Removed expensive backgroundPosition animation that triggers paints
-            // Using transform-only animations if needed, but keeping simpler for now to ensure 60FPS
         }, containerRef);
 
         return () => ctx.revert();
@@ -60,57 +48,48 @@ export default function Hero() {
     return (
         <section
             ref={containerRef}
-            className="relative flex flex-col items-center justify-center overflow-hidden perf-contain min-h-[90vh] md:min-h-screen pt-24 pb-20 md:pt-32 md:pb-24"
+            className="min-h-screen flex items-center justify-center text-center px-5 relative overflow-hidden py-16 md:py-24"
         >
-
-            {/* Layer 1 → Deep charcoal gradient (Static, GPU friendly) */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0F] via-[#111117] to-[#0A0A0E] -z-30 will-change-transform" />
-
-            {/* Layer 2 → Radial Gradient (Replaces heavy blur) - Desktop Only */}
+            {/* Background → Deep charcoal gradient + Subtle Center Radial */}
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0F] via-[#111117] to-[#0A0A0E] -z-30" />
             <div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none -z-20 hidden md:block"
+                className="absolute inset-0 pointer-events-none -z-20"
                 style={{
-                    width: '900px',
-                    height: '700px',
-                    background: 'radial-gradient(circle at center, rgba(198,169,107,0.08), transparent 60%)',
-                    willChange: 'transform'
+                    background: 'radial-gradient(circle at center, rgba(198,167,110,0.08), transparent 60%)'
                 }}
             />
 
-            {/* Layer 3 → Grain (Optimized opacity) */}
+            {/* Grain Overlay */}
             <div className="absolute inset-0 opacity-[0.02] pointer-events-none -z-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
 
-            <div className="text-center z-[2] flex flex-col items-center w-full relative max-w-[var(--container-mobile)] md:max-w-[var(--container-desktop)]">
+            <div className="max-w-[900px] mx-auto z-[2] flex flex-col items-center">
 
-                {/* HEADLINE BLOCK */}
-                <div className="flex flex-col items-center mb-8 md:mb-16 w-full">
-                    <h1 ref={addToTitleRefs} className="font-serif text-primary text-center font-light leading-[1.1] md:leading-[0.9] drop-shadow-2xl">
-                        <span className="block text-[var(--font-h1)]">
-                            Invisible
-                        </span>
-                        <span className="block text-[var(--font-h1)] font-medium">
-                            <span className="italic text-secondary/70 font-light text-[0.5em] mr-2 md:mr-4 align-middle">Digital</span>
-                            Excellence
-                        </span>
-                    </h1>
-                </div>
+                {/* Pre-heading */}
+                <span className="text-sm tracking-widest uppercase text-[#C6A96B]/70 mb-6 block">
+                    Digital Excellence
+                </span>
 
-                {/* SUBTEXT */}
+                {/* Heading */}
+                <h1 ref={addToTitleRefs} className="font-serif leading-[1.1] tracking-[-0.02em] text-[clamp(2.4rem,5vw,6rem)] text-primary font-light drop-shadow-2xl">
+                    Invisible
+                    <br />
+                    Excellence
+                </h1>
+
+                {/* Subtext */}
                 <p
                     ref={subtextRef}
-                    className="text-[var(--font-body)] text-secondary font-light max-w-full md:max-w-2xl leading-relaxed md:leading-loose mb-10 md:mb-16 tracking-wide px-4"
+                    className="mt-6 text-base md:text-lg text-white/70 max-w-[650px] mx-auto leading-relaxed"
                 >
                     We engineer premium digital infrastructure for ambitious brands.
-                    <span className="hidden md:inline"> </span>
                     Merging systems thinking with high-end aesthetics.
                 </p>
 
-                {/* CTA BUTTONS - Vertical Mobile, Inline Desktop */}
-                <div ref={ctaRef} className="flex flex-col md:flex-row gap-4 md:gap-8 items-center w-full max-w-[320px] md:max-w-none justify-center">
+                {/* CTA Buttons - Stacked on Mobile */}
+                <div ref={ctaRef} className="flex flex-col md:flex-row gap-4 justify-center items-center mt-10 w-full">
                     <Link href="/services" className="w-full md:w-auto">
                         <MagneticButton
-                            className="group relative w-full md:w-auto px-8 py-5 bg-accent/90 text-black rounded-none text-xs font-bold uppercase tracking-[0.25em] overflow-hidden transition-transform duration-300 hover:-translate-y-1 block text-center"
-                            style={{ willChange: 'transform' }}
+                            className="w-full md:min-w-[200px] max-w-[320px] px-8 py-4 bg-[#C6A76E] text-black font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-colors duration-300"
                         >
                             Explore Services
                         </MagneticButton>
@@ -118,8 +97,7 @@ export default function Hero() {
 
                     <Link href="/contact" className="w-full md:w-auto">
                         <MagneticButton
-                            className="group relative w-full md:w-auto px-8 py-5 bg-white/[0.05] border border-white/10 text-white rounded-none text-xs font-bold uppercase tracking-[0.25em] transition-transform duration-300 hover:border-accent hover:text-accent hover:-translate-y-1 block text-center"
-                            style={{ willChange: 'transform' }}
+                            className="w-full md:min-w-[200px] max-w-[320px] px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-[0.2em] text-xs hover:border-[#C6A76E] hover:text-[#C6A76E] transition-colors duration-300 bg-transparent"
                         >
                             Book Strategy Call
                         </MagneticButton>
@@ -127,12 +105,10 @@ export default function Hero() {
                 </div>
             </div>
 
-            {/* SCROLL INDICATOR */}
-            <div className="absolute bottom-[20px] md:bottom-[40px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-[1] mix-blend-normal pointer-events-none opacity-50">
-                <span className="text-[8px] uppercase tracking-[0.3em] text-[#C6A96B] font-medium">Scroll</span>
-                <div className="relative flex flex-col items-center h-12 md:h-20">
-                    <div className="w-[1px] h-full bg-gradient-to-b from-[#C6A96B]/60 to-transparent" />
-                </div>
+            {/* Scroll Indicator - Bottom Anchored */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 mix-blend-overlay opacity-50 z-[1]">
+                <span className="text-[9px] uppercase tracking-[0.3em] text-[#C6A96B]">Scroll</span>
+                <div className="w-[1px] h-12 bg-gradient-to-b from-[#C6A96B] to-transparent" />
             </div>
 
         </section>
