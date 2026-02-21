@@ -54,11 +54,11 @@ Total Estimate: ₹${grandTotal}
         <section className="py-24 px-4 md:px-12 max-w-4xl mx-auto">
             <div className="text-center mb-16">
                 <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/80 border border-accent/20 px-4 py-2 rounded-full mb-6 inline-block backdrop-blur-sm bg-accent/[0.05]">
-                    Custom Builder
+                    Modular Add-Ons
                 </span>
-                <h2 className="text-4xl md:text-5xl font-serif text-primary tracking-tight mb-6">Build Your<span className="italic text-secondary/60 font-light ml-3">System</span></h2>
+                <h2 className="text-4xl md:text-5xl font-serif text-primary tracking-tight mb-6">System <span className="italic text-secondary/60 font-light ml-3">Upgrades</span></h2>
                 <p className="text-secondary/60 font-light tracking-wide max-w-lg mx-auto leading-relaxed">
-                    Select exactly what you need. We'll engineer the rest.
+                    Enhance your system with precision upgrades.
                 </p>
             </div>
 
@@ -80,8 +80,8 @@ Total Estimate: ₹${grandTotal}
                         <motion.div
                             key={addon.id}
                             className={`p-4 border rounded-lg cursor-pointer transition-all duration-300 flex justify-between items-center group ${selectedAdds.includes(addon.id)
-                                    ? "bg-accent/[0.08] border-accent/40 shadow-[0_0_20px_rgba(191,163,106,0.05)]"
-                                    : "bg-white/[0.02] border-white/5 hover:border-white/20"
+                                ? "bg-accent/[0.08] border-accent/40 shadow-[0_0_20px_rgba(191,163,106,0.05)]"
+                                : "bg-white/[0.02] border-white/5 hover:border-white/20"
                                 }`}
                             onClick={() => toggleAddOn(addon.id)}
                             whileTap={{ scale: 0.98 }}

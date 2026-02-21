@@ -47,7 +47,7 @@ export default function SEOOptimizationPage() {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-2xl font-serif text-white mb-6">Search Performance Standards</h2>
                     <p className="text-secondary/60 text-sm mb-8 max-w-2xl mx-auto">
-                        We adhere strictly to Google's core ranking principles. No shortcuts, just engineering excellence.
+                        We adhere strictly to Google&apos;s core ranking principles. No shortcuts, just engineering excellence.
                     </p>
                     <a
                         href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide"

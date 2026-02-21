@@ -137,7 +137,7 @@ export default function RestaurantPage() {
                                     </div>
                                 </div>
 
-                                /* Image Side with Wood Frame Effect */
+                                {/* Image Side with Wood Frame Effect */}
                                 <div className={styles.pizzaVisual}>
                                     <div className={styles.woodFrame}>
                                         {/* Placeholder for Pizza Image */}

@@ -44,25 +44,43 @@ export default function PricingPage() {
             </div>
 
             {/* 2. Enterprise Banner */}
-            <section className="px-4 md:px-12 max-w-7xl mx-auto mb-32">
-                <div className="relative p-8 md:p-12 border border-white/5 rounded-2xl overflow-hidden bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop')] bg-cover bg-center">
-                    <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
-                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
-                        <div>
-                            <h3 className="text-3xl font-serif text-white mb-2">Crown Enterprise Build</h3>
-                            <p className="text-white/60 font-light max-w-lg">
-                                For those who need everything customizable. CRM, funnels, complex integrations, and multi-language support.
-                            </p>
-                        </div>
-                        <div className="flex flex-col items-center md:items-end gap-2">
-                            <span className="text-sm uppercase tracking-widest text-accent">Starting from</span>
-                            <span className="text-4xl font-serif text-white">₹59,999</span>
-                            <a
-                                href="https://api.whatsapp.com/send/?phone=919901981097&text=Hi%20Velora%2C%20I%27d%20like%20to%20discuss%20an%20Enterprise%20Custom%20Build.&type=phone_number&app_absent=0"
-                                className="mt-2 text-xs font-bold uppercase tracking-[0.2em] border-b border-white hover:border-accent hover:text-accent transition-colors pb-1"
-                            >
-                                Inquire Directly
-                            </a>
+            <section className="py-20 px-6">
+                <div className="max-w-5xl mx-auto">
+                    <div className="relative rounded-2xl border border-white/10 overflow-hidden bg-black/40 backdrop-blur-sm">
+                        {/* Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/80"></div>
+
+                        <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center p-10 md:p-14">
+
+                            {/* LEFT SIDE */}
+                            <div>
+                                <h3 className="text-3xl font-serif text-white mb-2">Enterprise Systems</h3>
+                                <p className="text-white/60 font-light max-w-lg">
+                                    Fully customized digital infrastructure.
+                                </p>
+                            </div>
+
+                            {/* RIGHT SIDE */}
+                            <div className="md:text-right">
+                                <p className="text-sm tracking-widest text-accent uppercase">
+                                    Starting From
+                                </p>
+
+                                <p className="text-4xl md:text-5xl font-serif text-white mt-2">
+                                    ₹59,999
+                                </p>
+
+                                <a
+                                    href="https://api.whatsapp.com/send/?phone=919901981097&text=Hi%20Velora%2C%20I%27d%20like%20to%20discuss%20an%20Enterprise%20Custom%20Build.&type=phone_number&app_absent=0"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <button className="mt-6 border border-white/20 px-6 py-3 rounded-full text-sm tracking-wide hover:bg-white hover:text-black transition text-white">
+                                        Inquire Directly
+                                    </button>
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 import ServicePageTemplate from "@/components/service-page-template";
-import Link from "next/link";
+import ServiceCard from "@/components/service-card";
 import Image from "next/image";
 
 export default function BusinessCardsPage() {
@@ -7,7 +7,7 @@ export default function BusinessCardsPage() {
         <ServicePageTemplate
             title="Business Cards"
             description="Luxury physical identity. Premium paper, foil stamping, and optional NFC smart integration."
-            heroImage="https://images.unsplash.com/photo--W6V8m0VPoA?q=80&w=2670&auto=format&fit=crop"
+            heroImage="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=2070&auto=format&fit=crop"
             offerings={[
                 "Premium Paper Cards: Matte finish, foil stamping, high GSM.",
                 "Embossed Typography: Tactile elegance that leaves a lasting impression.",
@@ -63,28 +63,32 @@ export default function BusinessCardsPage() {
             <section className="py-20 bg-black/50 border-t border-white/5">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl font-serif text-white mb-12 text-center">Select Card Type</h2>
-                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                         {[
                             {
                                 title: "Premium Paper Cards",
-                                desc: "Matte finish, gold foil, high GSM.",
+                                description: "Matte finish, gold foil, high GSM.",
                                 link: "/services/business-cards/paper",
-                                image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?q=80&w=2070&auto=format&fit=crop"
+                                image: "https://images.unsplash.com/photo-1634942537034-2531766767d1?q=80&w=2070&auto=format&fit=crop",
+                                tags: ["Tactile", "Luxury"]
                             },
                             {
                                 title: "NFC Smart Cards",
-                                desc: "Digital profile integration. Tap & Share.",
+                                description: "Digital profile integration. Tap & Share.",
                                 link: "/services/business-cards/nfc",
-                                image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?q=80&w=2670&auto=format&fit=crop"
+                                image: "https://images.unsplash.com/photo-1562564055-71e051d33c19?q=80&w=2670&auto=format&fit=crop",
+                                tags: ["Tech", "Smart"]
                             }
                         ].map((type, i) => (
-                            <Link key={i} href={type.link} className="group block relative aspect-[16/9] overflow-hidden border border-white/10 bg-surface">
-                                <Image src={type.image} alt={type.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-60 group-hover:opacity-80" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-6 flex flex-col justify-end">
-                                    <h3 className="text-xl font-serif text-white mb-1 group-hover:text-accent transition-colors">{type.title}</h3>
-                                    <p className="text-secondary text-sm">{type.desc}</p>
-                                </div>
-                            </Link>
+                            <ServiceCard
+                                key={i}
+                                title={type.title}
+                                description={type.description}
+                                number={`0${i + 1}`}
+                                tags={type.tags}
+                                image={type.image}
+                                href={type.link}
+                            />
                         ))}
                     </div>
                 </div>
