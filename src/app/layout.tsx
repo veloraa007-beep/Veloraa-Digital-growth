@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import CookieConsent from "@/components/cookie-consent";
 import FloatingWhatsApp from "@/components/floating-whatsapp";
+import FrontendProtection from "@/components/frontend-protection";
 import { Analytics } from "@vercel/analytics/react";
 import VeloraLoader from "@/components/velora-loader";
 
@@ -90,6 +91,7 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black bg-background text-primary overflow-x-hidden`}
       >
         <VeloraLoader />
+        <FrontendProtection />
         <SmoothScroll>
           {/* <CustomCursor /> Removed for V2 "Restraint" */}
           <Header />

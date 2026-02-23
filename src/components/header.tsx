@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -49,7 +50,7 @@ export default function Header() {
                     {/* LOGO - Luxury Authority */}
                     <Link
                         href="/"
-                        className="z-50 relative group"
+                        className="z-50 relative group block"
                         onClick={(e) => {
                             if (pathname === "/") {
                                 e.preventDefault();
@@ -58,9 +59,15 @@ export default function Header() {
                             setMobileMenuOpen(false);
                         }}
                     >
-                        <span className="text-xl md:text-3xl font-serif font-medium tracking-[0.15em] text-[#EAE6DD] group-hover:text-accent transition-colors duration-700 drop-shadow-[0_0_15px_rgba(234,230,221,0.15)]">
-                            VELORA
-                        </span>
+                        <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden transition-all duration-700 group-hover:scale-105 group-hover:shadow-[0_0_25px_rgba(194,163,93,0.25)] border border-white/5 group-hover:border-accent/30">
+                            <Image
+                                src="/images/velora-logo-cropped.png"
+                                alt="VELORA"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </div>
                     </Link>
 
                     {/* DESKTOP NAV - REFINED HIERARCHY */}
