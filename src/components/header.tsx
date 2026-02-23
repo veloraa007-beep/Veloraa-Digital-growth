@@ -48,9 +48,7 @@ export default function Header() {
 
                 <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
                     {/* LOGO - Luxury Authority */}
-                    <Link
-                        href="/"
-                        className="z-50 relative group block"
+                    <Link href="/" className="text-2xl tracking-wider font-serif text-white z-50 relative"
                         onClick={(e) => {
                             if (pathname === "/") {
                                 e.preventDefault();
@@ -59,19 +57,11 @@ export default function Header() {
                             setMobileMenuOpen(false);
                         }}
                     >
-                        <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden transition-all duration-700 group-hover:scale-105 group-hover:shadow-[0_0_25px_rgba(194,163,93,0.25)] border border-white/5 group-hover:border-accent/30">
-                            <Image
-                                src="/images/velora-logo-cropped.png"
-                                alt="VELORA"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                        </div>
+                        VELORA
                     </Link>
 
                     {/* DESKTOP NAV - REFINED HIERARCHY */}
-                    <nav className="hidden md:flex items-center gap-16">
+                    <nav className="hidden md:flex items-center gap-10 tracking-[0.2em] text-[15px] uppercase">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
                             return (
@@ -79,18 +69,13 @@ export default function Header() {
                                     key={link.name}
                                     href={link.href}
                                     className={cn(
-                                        "relative text-[11px] font-medium font-sans tracking-[0.2em] uppercase transition-all duration-500",
-                                        isActive ? "text-white" : "text-white/50 hover:text-white"
+                                        "relative text-neutral-300 font-medium font-sans transition-all duration-300 ease-in-out",
+                                        "hover:text-[#C6A75E] hover:tracking-[0.25em]",
+                                        "after:absolute after:left-0 after:-bottom-2 after:h-[1px] after:w-0 after:bg-[#C6A75E] after:transition-all after:duration-300 hover:after:w-full",
+                                        isActive ? "text-[#C6A75E] after:w-full" : ""
                                     )}
                                 >
                                     {link.name}
-                                    {isActive && (
-                                        <motion.span
-                                            layoutId="activeNavLine"
-                                            className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-accent"
-                                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                        />
-                                    )}
                                 </Link>
                             );
                         })}
@@ -105,8 +90,8 @@ export default function Header() {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className={cn(
-                                "hidden md:block px-8 py-3 text-[10px] font-bold font-sans uppercase tracking-[0.25em] transition-all duration-500",
-                                "bg-white/[0.03] backdrop-blur-md border border-white/10 text-[#EAE6DD] hover:border-accent hover:text-accent"
+                                "hidden md:block border border-[#C6A75E]/40 px-6 py-2 text-sm tracking-[0.2em] uppercase font-bold font-sans text-neutral-200 transition-all duration-300",
+                                "bg-white/[0.03] backdrop-blur-md hover:bg-[#C6A75E] hover:text-black"
                             )}
                         >
                             Book a Call
