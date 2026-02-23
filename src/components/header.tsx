@@ -48,7 +48,9 @@ export default function Header() {
 
                 <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
                     {/* LOGO - Luxury Authority */}
-                    <Link href="/" className="text-2xl tracking-wider font-serif text-white z-50 relative"
+                    <Link
+                        href="/"
+                        className="z-50 relative text-[20px] font-serif font-light tracking-[0.35em] text-neutral-300 transition-all duration-300 hover:text-[#C6A75E]"
                         onClick={(e) => {
                             if (pathname === "/") {
                                 e.preventDefault();
