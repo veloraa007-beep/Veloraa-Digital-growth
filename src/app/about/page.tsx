@@ -260,15 +260,37 @@ export default function AboutPage() {
                 3.2 CO-FOUNDER — STRUCTURAL DESIGN LEAD
             ═══════════════════════════════════════════════ */}
             <section className="py-24 md:py-32 px-6 md:px-12 bg-[#141618]">
-                <div className="max-w-5xl mx-auto">
-                    <div className="flex gap-12 md:gap-16">
-                        {/* Gold vertical divider */}
-                        <div className="hidden md:block w-[2px] bg-gradient-to-b from-transparent via-[#C2A35D]/40 to-transparent shrink-0" />
+                <div className="max-w-6xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
+                        {/* LEFT: Co-Founder Image */}
+                        <div className="relative group w-full max-w-[420px] mx-auto md:mx-0 order-2 md:order-1">
+                            <div className="relative overflow-hidden rounded-2xl shadow-2xl shadow-black/50 border border-[#2A2E30] aspect-[4/5] bg-[#1A1C1E]">
+                                <Image
+                                    src="/images/cofounder.jpg"
+                                    alt="Co-Founder — Harshit Gowda, Velora"
+                                    fill
+                                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                />
+                            </div>
 
-                        <div className="max-w-3xl">
-                            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C2A35D]/60 mb-6 block">
-                                Co-Founder &amp; Structural Design Lead
-                            </span>
+                            {/* Intro Card */}
+                            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[85%] bg-black/80 backdrop-blur-md border border-[#2A2E30] p-5 rounded-xl text-center shadow-xl z-10">
+                                <div className="text-[#EAE6DD] font-serif text-lg tracking-wide">
+                                    Co-Founder of Velora
+                                </div>
+                                <div className="text-[10px] uppercase tracking-wider text-[#A8A39B]/60 mt-1 font-medium">
+                                    Architectural Engineering • Structural Design
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* RIGHT: Positioning Text */}
+                        <div className="flex flex-col justify-center h-full pt-8 md:pt-12 order-1 md:order-2">
+                            <div className="self-start mb-8">
+                                <span className="inline-block px-4 py-1.5 rounded-full bg-[#C2A35D]/10 border border-[#C2A35D]/20 text-[#C2A35D] text-xs font-bold uppercase tracking-[0.15em]">
+                                    Co-Founder &amp; Structural Design Lead
+                                </span>
+                            </div>
 
                             <h2
                                 className="font-serif font-semibold tracking-tight leading-[1.1] mb-8"
