@@ -5,7 +5,9 @@ import SmoothScroll from "@/components/smooth-scroll";
 import CustomCursor from "@/components/ui/custom-cursor";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import CookieConsent from "@/components/cookie-consent";
 import FloatingWhatsApp from "@/components/floating-whatsapp";
+import { Analytics } from "@vercel/analytics/react";
 
 // Refined Sans-Serif for Body, Navigation, Buttons
 const inter = Inter({
@@ -32,17 +34,47 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "VELORA | Digital Systems Architecture",
   description: "Velora engineers invisible excellence. Premium digital systems architecture for brands that demand architectural precision and editorial elegance.",
+  keywords: ["digital agency", "web design", "premium websites", "SaaS platforms", "WhatsApp automation", "SEO optimization", "Bangalore", "India", "digital growth"],
+  authors: [{ name: "Velora Digital", url: "https://velora.digital" }],
+  creator: "Velora Digital",
+  publisher: "Velora Digital",
   openGraph: {
     title: "VELORA | Digital Systems Architecture",
-    description: "Engineering invisible excellence with architectural precision.",
+    description: "Engineering invisible excellence with architectural precision. Premium digital growth systems for ambitious brands.",
     url: "https://velora.digital",
     siteName: "VELORA",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "VELORA — Digital Growth Operating System",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VELORA | Digital Systems Architecture",
+    description: "Engineering invisible excellence with architectural precision. Premium digital growth systems for ambitious brands.",
+    images: ["/og-image.png"],
+    creator: "@veloraa_digital",
   },
   metadataBase: new URL("https://velora.digital"),
   alternates: {
     canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -63,6 +95,8 @@ export default function RootLayout({
             {children}
           </div>
           <FloatingWhatsApp />
+          <CookieConsent />
+          <Analytics />
           <Footer />
         </SmoothScroll>
       </body>

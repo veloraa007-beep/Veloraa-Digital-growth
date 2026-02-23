@@ -20,6 +20,8 @@ import ClientQualification from "@/components/client-qualification";
 import RetainerProgram from "@/components/retainer-program";
 import StrategyCall from "@/components/strategy-call";
 import FloatingCTA from "@/components/floating-cta";
+import Testimonials from "@/components/testimonials";
+import FAQ from "@/components/faq";
 
 export default function Home() {
   return (
@@ -61,6 +63,15 @@ export default function Home() {
       {/* ── POST-DELIVERY ── */}
       <PostLaunch />
       <LocalToGlobal />
+
+      {/* Breathing Space */}
+      <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-accent/10 to-transparent" />
+
+      {/* ── SOCIAL PROOF ── */}
+      <Testimonials />
+
+      {/* ── FAQ ── */}
+      <FAQ />
 
       {/* Breathing Space */}
       <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-accent/10 to-transparent" />

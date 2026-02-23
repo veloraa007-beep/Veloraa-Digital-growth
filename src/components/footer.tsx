@@ -26,8 +26,6 @@ export default function Footer() {
                         <div className="flex gap-3 pt-2">
                             {[
                                 { name: "Instagram", url: "https://www.instagram.com/veloraa.digital/" },
-                                { name: "LinkedIn", url: "#" },
-                                { name: "Twitter", url: "#" }
                             ].map((social) => (
                                 <a
                                     key={social.name}
