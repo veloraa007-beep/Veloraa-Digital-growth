@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import CookieConsent from "@/components/cookie-consent";
 import FloatingWhatsApp from "@/components/floating-whatsapp";
 import { Analytics } from "@vercel/analytics/react";
+import VeloraLoader from "@/components/velora-loader";
 
 // Refined Sans-Serif for Body, Navigation, Buttons
 const inter = Inter({
@@ -88,6 +89,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black bg-background text-primary overflow-x-hidden`}
       >
+        <VeloraLoader />
         <SmoothScroll>
           {/* <CustomCursor /> Removed for V2 "Restraint" */}
           <Header />
