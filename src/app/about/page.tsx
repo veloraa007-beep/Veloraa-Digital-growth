@@ -257,6 +257,119 @@ export default function AboutPage() {
             </section>
 
             {/* ═══════════════════════════════════════════════
+                3.2 CO-FOUNDER — STRUCTURAL DESIGN LEAD
+            ═══════════════════════════════════════════════ */}
+            <section className="py-24 md:py-32 px-6 md:px-12 bg-[#141618]">
+                <div className="max-w-5xl mx-auto">
+                    <div className="flex gap-12 md:gap-16">
+                        {/* Gold vertical divider */}
+                        <div className="hidden md:block w-[2px] bg-gradient-to-b from-transparent via-[#C2A35D]/40 to-transparent shrink-0" />
+
+                        <div className="max-w-3xl">
+                            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C2A35D]/60 mb-6 block">
+                                Co-Founder &amp; Structural Design Lead
+                            </span>
+
+                            <h2
+                                className="font-serif font-semibold tracking-tight leading-[1.1] mb-8"
+                                style={{
+                                    fontSize: "clamp(1.6rem, 3vw, 2.8rem)",
+                                }}
+                            >
+                                Structural{" "}
+                                <span className="italic text-[#EAE6DD]/40 font-light">
+                                    Precision
+                                </span>
+                            </h2>
+
+                            <div className="space-y-6 text-[#A8A39B] text-base sm:text-lg leading-relaxed font-light">
+                                <p>
+                                    Harshit Gowda brings architectural thinking
+                                    into Velora&apos;s foundation.
+                                </p>
+                                <p>
+                                    With a background in architectural
+                                    engineering, he approaches systems through
+                                    structure, proportion, and long-term
+                                    durability. His design philosophy extends
+                                    beyond aesthetics — every visual identity,
+                                    logo, and brand system is treated as a
+                                    structural framework, not decoration.
+                                </p>
+                                <p>
+                                    While Velora operates with
+                                    cybersecurity-first principles, Harshit
+                                    contributes a grounded understanding of
+                                    business realities, spatial logic, and
+                                    emerging technology landscapes. His
+                                    awareness of how digital presence translates
+                                    into real-world credibility strengthens
+                                    Velora&apos;s strategic depth.
+                                </p>
+                                <p className="text-[#EAE6DD]/70 font-normal">
+                                    Together, Velora merges digital
+                                    infrastructure with architectural precision
+                                    — building brands that are not only secure
+                                    and scalable, but structurally intentional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ── Partnership Grid ── */}
+                    <div className="mt-20 grid grid-cols-2 gap-0 border border-[#2A2E30] rounded-2xl overflow-hidden">
+                        {/* Headers */}
+                        <div className="p-6 md:p-8 bg-[#1A1C1E] border-b border-r border-[#2A2E30] text-center">
+                            <span className="text-[#EAE6DD] font-serif text-lg font-semibold">
+                                Founder
+                            </span>
+                        </div>
+                        <div className="p-6 md:p-8 bg-[#1A1C1E] border-b border-[#2A2E30] text-center">
+                            <span className="text-[#EAE6DD] font-serif text-lg font-semibold">
+                                Co-Founder
+                            </span>
+                        </div>
+
+                        {/* Row 1 */}
+                        <div className="p-5 md:p-6 border-b border-r border-[#2A2E30] text-center">
+                            <span className="text-[#C2A35D]/80 text-sm font-medium">
+                                Systems Architecture
+                            </span>
+                        </div>
+                        <div className="p-5 md:p-6 border-b border-[#2A2E30] text-center">
+                            <span className="text-[#C2A35D]/80 text-sm font-medium">
+                                Structural Design
+                            </span>
+                        </div>
+
+                        {/* Row 2 */}
+                        <div className="p-5 md:p-6 border-b border-r border-[#2A2E30] text-center">
+                            <span className="text-[#A8A39B]/60 text-sm font-light">
+                                Cybersecurity Mindset
+                            </span>
+                        </div>
+                        <div className="p-5 md:p-6 border-b border-[#2A2E30] text-center">
+                            <span className="text-[#A8A39B]/60 text-sm font-light">
+                                Architectural Precision
+                            </span>
+                        </div>
+
+                        {/* Row 3 */}
+                        <div className="p-5 md:p-6 border-r border-[#2A2E30] text-center">
+                            <span className="text-[#A8A39B]/60 text-sm font-light">
+                                Automation &amp; Infrastructure
+                            </span>
+                        </div>
+                        <div className="p-5 md:p-6 text-center">
+                            <span className="text-[#A8A39B]/60 text-sm font-light">
+                                Brand Identity &amp; Spatial Logic
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* ═══════════════════════════════════════════════
                 3.5 INFRASTRUCTURE SHOWCASE — THE CRAFT
             ═══════════════════════════════════════════════ */}
             <section className="relative py-24 md:py-32 overflow-hidden bg-[#0D0F11]">
