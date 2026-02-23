@@ -119,6 +119,11 @@ export default function Footer() {
                                     Security & Compliance
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/refund-policy" className="text-secondary/40 hover:text-primary transition-colors text-xs font-light">
+                                    Refund & Cancellation
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

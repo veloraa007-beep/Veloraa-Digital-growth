@@ -66,12 +66,18 @@ const nextConfig: NextConfig = {
             value: 'same-origin'
           },
 
+          // — Cross-Origin Embedder Policy — Enable cross-origin isolation
+          {
+            key: 'Cross-Origin-Embedder-Policy',
+            value: 'credentialless'
+          },
+
           // — Content Security Policy — Strict allowlisting
           {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+              "script-src 'self' 'unsafe-inline'",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "font-src 'self' https://fonts.gstatic.com",
               "img-src 'self' blob: data: https://images.unsplash.com https://images.pexels.com",
