@@ -8,7 +8,7 @@ import MagneticButton from "./ui/magnetic-button";
 
 const marqueeItems = [
     "AWS", "Google Cloud", "Azure", "Supabase", "Stripe",
-    "Razorpay", "Cloudflare", "Zapier", "Make"
+    "Razorpay", "Cloudflare", "Zapier", "Make", "Canva"
 ];
 
 export default function Hero() {

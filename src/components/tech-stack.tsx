@@ -1,7 +1,7 @@
 const techStack = [
     "AWS", "Google Cloud", "Azure", "Stripe", "Razorpay",
     "Supabase", "Kubernetes", "Cloudflare", "Zapier", "Make",
-    "Twilio", "WhatsApp Cloud API",
+    "Twilio", "WhatsApp Cloud API", "Canva"
 ];
 
 export default function TechStack() {
