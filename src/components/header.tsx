@@ -50,7 +50,17 @@ export default function Header() {
                     {/* LOGO - Luxury Authority */}
                     <Link
                         href="/"
-                        className="z-50 relative text-[20px] font-serif font-light tracking-[0.35em] text-neutral-300 transition-all duration-300 hover:text-[#C6A75E]"
+                        className="
+                            z-50 relative
+                            text-[20px]
+                            md:text-[22px]
+                            font-serif
+                            font-light
+                            tracking-[0.35em]
+                            text-neutral-200
+                            transition-colors duration-300 ease-in-out
+                            hover:text-[#C6A75E]
+                        "
                         onClick={(e) => {
                             if (pathname === "/") {
                                 e.preventDefault();
@@ -63,7 +73,7 @@ export default function Header() {
                     </Link>
 
                     {/* DESKTOP NAV - REFINED HIERARCHY */}
-                    <nav className="hidden md:flex items-center gap-10 tracking-[0.2em] text-[15px] uppercase">
+                    <nav className="hidden md:flex items-center gap-12 tracking-[0.15em] text-[13px] uppercase">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
                             return (
@@ -71,29 +81,34 @@ export default function Header() {
                                     key={link.name}
                                     href={link.href}
                                     className={cn(
-                                        "relative text-neutral-300 font-medium font-sans transition-all duration-300 ease-in-out",
-                                        "hover:text-[#C6A75E] hover:tracking-[0.25em]",
-                                        "after:absolute after:left-0 after:-bottom-2 after:h-[1px] after:w-0 after:bg-[#C6A75E] after:transition-all after:duration-300 hover:after:w-full",
-                                        isActive ? "text-[#C6A75E] after:w-full" : ""
+                                        "relative font-medium font-sans transition-all duration-300 ease-in-out py-2",
+                                        isActive ? "text-[#EAE6DD]" : "text-[#A8A39B] hover:text-[#EAE6DD]"
                                     )}
                                 >
                                     {link.name}
+                                    {isActive && (
+                                        <motion.span
+                                            layoutId="activeNavDot"
+                                            className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#C6A75E]"
+                                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                        />
+                                    )}
                                 </Link>
                             );
                         })}
                     </nav>
 
                     {/* CTA & MOBILE TOGGLE */}
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center">
                         <motion.a
                             href="https://api.whatsapp.com/send/?phone=919901981097&text&type=phone_number&app_absent=0"
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ scale: 1.02 }}
+                            whileHover={{ scale: 1.02, backgroundColor: "rgba(198,167,94,0.05)", borderColor: "rgba(198,167,94,0.4)" }}
                             whileTap={{ scale: 0.98 }}
                             className={cn(
-                                "hidden md:block border border-[#C6A75E]/40 px-6 py-2 text-sm tracking-[0.2em] uppercase font-bold font-sans text-neutral-200 transition-all duration-300",
-                                "bg-white/[0.03] backdrop-blur-md hover:bg-[#C6A75E] hover:text-black"
+                                "hidden md:flex items-center justify-center border border-white/10 px-6 py-2.5 text-[11px] tracking-[0.15em] uppercase font-bold font-sans text-[#EAE6DD] transition-all duration-300",
+                                "bg-[#141618]/80 backdrop-blur-md rounded-sm"
                             )}
                         >
                             Book a Call
