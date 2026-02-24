@@ -7,7 +7,6 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import CookieConsent from "@/components/cookie-consent";
 import FloatingWhatsApp from "@/components/floating-whatsapp";
-import FrontendProtection from "@/components/frontend-protection";
 import { Analytics } from "@vercel/analytics/react";
 import VeloraLoader from "@/components/velora-loader";
 
@@ -34,49 +33,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "VELORA | Digital Systems Architecture",
-  description: "Engineering invisible excellence with architectural precision.",
-  keywords: ["digital agency", "web design", "premium websites", "SaaS platforms", "WhatsApp automation", "SEO optimization", "Bangalore", "India", "digital growth"],
-  authors: [{ name: "Velora Digital", url: "https://veloraa-digital-growth.vercel.app" }],
-  creator: "Velora Digital",
-  publisher: "Velora Digital",
-  openGraph: {
-    title: "VELORA | Digital Systems Architecture",
-    description: "Engineering invisible excellence with architectural precision.",
-    url: "https://veloraa-digital-growth.vercel.app",
-    siteName: "VELORA",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/og-image-v2.png",
-        width: 1200,
-        height: 630,
-        alt: "VELORA Digital Systems Architecture",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "VELORA | Digital Systems Architecture",
-    description: "Engineering invisible excellence with architectural precision.",
-    images: ["/og-image-v2.png"],
-    creator: "@veloraa_digital",
-  },
-  metadataBase: new URL("https://veloraa-digital-growth.vercel.app"),
-  alternates: {
-    canonical: "/",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+  title: "Velora",
+  description: "Digital Growth Infrastructure",
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
@@ -91,7 +51,6 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black bg-background text-primary overflow-x-hidden`}
       >
         <VeloraLoader />
-        <FrontendProtection />
         <SmoothScroll>
           {/* <CustomCursor /> Removed for V2 "Restraint" */}
           <Header />

@@ -87,24 +87,6 @@ body {
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
 
-  /* --- SOFT SECURITY MEASURES --- */
-  /* Disable text selection */
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Allow selection in inputs/textareas if needed */
-input, textarea {
-  user-select: auto;
-  -webkit-user-select: auto;
-}
-
-/* Prevent image dragging and interactions (forces right click/overlay issues for scraping) */
-img {
-  pointer-events: none; /* Prevents context menus and dragging on images directly */
-  -webkit-user-drag: none;
-  user-select: none;
-  -webkit-user-select: none;
 }
 
 /* Luxury Utilities - Performance Optimized */

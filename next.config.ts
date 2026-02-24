@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
   // Enable React Strict Mode for runtime safety checks
   reactStrictMode: true,
 
-  // Disable source maps in production to prevent easy frontend reverse engineering
-  productionBrowserSourceMaps: false,
-
   async headers() {
     return [
       {

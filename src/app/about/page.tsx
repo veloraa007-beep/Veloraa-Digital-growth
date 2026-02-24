@@ -147,6 +147,26 @@ export default function AboutPage() {
                                 <br />
                                 It&apos;s structural.
                             </p>
+
+                            <p className="pt-4">
+                                Velora operates at the intersection of engineering precision and strategic growth.
+                            </p>
+                            <p className="text-[#EAE6DD]/70 font-normal">
+                                We don&apos;t build websites.<br />
+                                We architect digital infrastructure designed to scale, convert, and dominate markets.
+                            </p>
+                            <p>
+                                Every system is built with long-term leverage in mind — automation, security, and control.
+                            </p>
+                            <p className="pt-4 text-[#C2A35D]/90">
+                                This is not surface-level design.
+                            </p>
+                            <p>
+                                Velora engineers systems the way enterprises do — structured, resilient, and built for sustained expansion.
+                            </p>
+                            <p className="text-[#EAE6DD] font-medium pt-2 italic tracking-wide">
+                                Because growth without infrastructure is just noise.
+                            </p>
                         </div>
                     </div>
                 </div>
