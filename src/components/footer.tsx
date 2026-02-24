@@ -1,69 +1,30 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-background pt-24 pb-12 border-t border-white/5 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+        <footer className="bg-background pt-32 pb-12 relative overflow-hidden flex flex-col items-center">
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
 
-                    {/* Brand Column */}
-                    <div className="col-span-1 md:col-span-1 space-y-6">
-                        <Link href="/" className="inline-block">
-                            <span className="text-2xl font-serif font-medium text-primary tracking-tight">
-                                VELORA
-                            </span>
-                        </Link>
-                        <p className="text-secondary/50 max-w-xs leading-relaxed font-light text-xs tracking-wide">
-                            Digital Growth Operating System™
-                        </p>
+                {/* Top Line */}
+                <div className="mb-16 text-center md:text-left">
+                    <Link href="/" className="inline-block group">
+                        <span className="text-3xl md:text-4xl font-serif font-light text-primary tracking-tighter group-hover:text-accent transition-colors duration-500">
+                            VELORA
+                        </span>
+                    </Link>
+                </div>
 
-                        {/* Social Links */}
-                        <div className="flex gap-3 pt-2">
-                            {[
-                                { name: "Instagram", url: "https://www.instagram.com/veloraa.digital/" },
-                            ].map((social) => (
-                                <a
-                                    key={social.name}
-                                    href={social.url}
-                                    target={social.url !== "#" ? "_blank" : "_self"}
-                                    rel={social.url !== "#" ? "noopener noreferrer" : ""}
-                                    className="group flex items-center justify-center w-8 h-8 rounded-full border border-white/5 hover:border-accent/30 bg-white/[0.02] transition-colors"
-                                    aria-label={social.name}
-                                >
-                                    <span className="text-secondary/40 group-hover:text-accent text-[10px] uppercase tracking-wide font-medium">
-                                        {social.name.slice(0, 2)}
-                                    </span>
-                                </a>
-                            ))}
-                        </div>
-                    </div>
+                {/* Middle Grid (3 Columns) */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mb-24">
 
-                    {/* Infrastructure */}
+                    {/* Column 1: Links */}
                     <div>
-                        <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-6">Infrastructure</h4>
-                        <ul className="space-y-3">
-                            {["Premium Websites", "SaaS Platforms", "WhatsApp Automation", "Lead Funnels"].map((item) => (
-                                <li key={item}>
-                                    <Link
-                                        href={`/services/${item.toLowerCase().replace(/ /g, '-')}`}
-                                        className="text-secondary/50 hover:text-primary transition-colors text-xs font-light tracking-wide"
-                                    >
-                                        {item}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Systems */}
-                    <div>
-                        <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-6">Systems</h4>
-                        <ul className="space-y-3">
+                        <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-8">Navigation</h4>
+                        <ul className="space-y-4">
                             {[
                                 { label: "About", href: "/about" },
                                 { label: "Services", href: "/services" },
@@ -73,7 +34,7 @@ export default function Footer() {
                                 <li key={item.label}>
                                     <Link
                                         href={item.href}
-                                        className="text-secondary/50 hover:text-primary transition-colors text-xs font-light tracking-wide"
+                                        className="text-secondary/60 hover:text-accent transition-colors text-sm font-light tracking-wide"
                                     >
                                         {item.label}
                                     </Link>
@@ -82,59 +43,91 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact + Legal */}
+                    {/* Column 2: Services */}
                     <div>
-                        <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-6">Contact</h4>
-                        <div className="flex flex-col gap-4 text-xs text-secondary/50 font-light tracking-wide mb-8">
-                            <a href="mailto:veloraa007@gmail.com" className="hover:text-primary transition-colors flex items-center gap-2">
-                                <Mail className="w-3 h-3 text-accent/40" />
-                                veloraa007@gmail.com
-                            </a>
-                            <a href="tel:+919901981097" className="hover:text-primary transition-colors flex items-center gap-2">
-                                <Phone className="w-3 h-3 text-accent/40" />
-                                +91 99019 81097
-                            </a>
-                            <div className="flex items-center gap-2">
-                                <MapPin className="w-3 h-3 text-accent/40" />
-                                Bangalore, India
-                            </div>
-                        </div>
+                        <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-8">Architecture</h4>
+                        <ul className="space-y-4">
+                            {[
+                                "Web Architecture",
+                                "Automation",
+                                "Infrastructure",
+                                "SaaS Systems"
+                            ].map((item) => (
+                                <li key={item}>
+                                    <Link
+                                        href={`/services/${item.toLowerCase().replace(/ /g, '-')}`}
+                                        className="text-secondary/60 hover:text-accent transition-colors text-sm font-light tracking-wide"
+                                    >
+                                        {item}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                        <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-4">Legal</h4>
-                        <ul className="space-y-2">
+                    {/* Column 3: Contact */}
+                    <div>
+                        <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-8">Contact</h4>
+                        <ul className="space-y-4 text-sm text-secondary/60 font-light tracking-wide">
                             <li>
-                                <Link href="/privacy-policy" className="text-secondary/40 hover:text-primary transition-colors text-xs font-light">
-                                    Privacy & Data Security
-                                </Link>
+                                <a href="mailto:veloraa007@gmail.com" className="hover:text-accent transition-colors">
+                                    veloraa007@gmail.com
+                                </a>
                             </li>
                             <li>
-                                <Link href="/terms" className="text-secondary/40 hover:text-primary transition-colors text-xs font-light">
-                                    Terms & Conditions
-                                </Link>
+                                <a href="tel:+919901981097" className="hover:text-accent transition-colors">
+                                    +91 99019 81097
+                                </a>
                             </li>
-                            <li>
-                                <Link href="/security" className="text-secondary/40 hover:text-primary transition-colors text-xs font-light">
-                                    Security & Compliance
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/refund-policy" className="text-secondary/40 hover:text-primary transition-colors text-xs font-light">
-                                    Refund & Cancellation
-                                </Link>
+                            <li className="text-secondary/40 pt-2">
+                                Bangalore, India
                             </li>
                         </ul>
                     </div>
+
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-[10px] text-secondary/30 font-sans uppercase tracking-[0.2em] font-medium">
-                        &copy; {currentYear} Veloraa — Digital Growth Operating System™
-                    </p>
-                    <p className="text-[9px] text-secondary/20 font-sans uppercase tracking-[0.15em]">
-                        Engineered in Bangalore
-                    </p>
+                {/* Footer Accent Line */}
+                <div className="w-full relative h-[2px] mb-8 opacity-70">
+                    <Image
+                        src="/images/footer_accent.png"
+                        alt=""
+                        fill
+                        className="object-cover mix-blend-screen"
+                        sizes="(max-width: 768px) 100vw, 1200px"
+                    />
                 </div>
+
+                {/* Bottom Line */}
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-6 pt-6 text-center lg:text-left">
+
+                    <div className="flex flex-col gap-2">
+                        <p className="text-[10px] sm:text-xs text-primary/80 font-sans uppercase tracking-[0.2em] font-medium">
+                            &copy; {currentYear} Velora — Digital Growth Operating System™
+                        </p>
+                        <p className="text-[9px] text-secondary/40 font-sans uppercase tracking-[0.15em]">
+                            Engineered in Bangalore
+                        </p>
+                    </div>
+
+                    {/* Social Row */}
+                    <div className="flex gap-6">
+                        {[
+                            { name: "Instagram", url: "https://www.instagram.com/veloraa.digital/" },
+                        ].map((social) => (
+                            <a
+                                key={social.name}
+                                href={social.url}
+                                target={social.url !== "#" ? "_blank" : "_self"}
+                                rel={social.url !== "#" ? "noopener noreferrer" : ""}
+                                className="text-secondary/50 hover:text-accent text-[10px] uppercase tracking-widest font-medium transition-colors duration-300"
+                            >
+                                {social.name}
+                            </a>
+                        ))}
+                    </div>
+                </div>
+
             </div>
         </footer>
     );

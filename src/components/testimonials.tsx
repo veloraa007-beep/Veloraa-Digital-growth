@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Quote } from "lucide-react";
 
 const testimonials = [
@@ -47,55 +48,64 @@ export default function Testimonials() {
     }, []);
 
     return (
-        <section className="py-24 px-6 md:px-12 bg-[#0F1113] relative overflow-hidden">
-            {/* Subtle background glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#C2A35D]/[0.02] rounded-full blur-[120px] pointer-events-none" />
+        <section className="py-24 px-6 md:px-12 relative overflow-hidden bg-background">
+            {/* Texture Background Image */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="/images/testimonial_texture.png"
+                    alt="Dark Texture Background"
+                    fill
+                    className="object-cover opacity-60"
+                    sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-background/40 mix-blend-multiply" />
+            </div>
 
-            <div className="max-w-3xl mx-auto relative">
+            <div className="max-w-4xl mx-auto relative z-10 w-full flex flex-col items-center">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#C2A35D]/60 mb-4 block">
+                    <span className="text-xs font-medium uppercase tracking-[0.3em] text-accent/80 mb-6 block">
                         Client Feedback
                     </span>
                     <h2
-                        className="font-serif font-semibold text-[#EAE6DD] tracking-tight leading-[1.1]"
-                        style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)" }}
+                        className="font-serif font-light text-primary tracking-tight leading-[1.1]"
+                        style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
                     >
                         What Our Clients{" "}
-                        <span className="italic text-[#EAE6DD]/40 font-light">
+                        <span className="italic text-primary/40 font-extralight">
                             Say
                         </span>
                     </h2>
                 </div>
 
                 {/* Testimonial card */}
-                <div className="bg-[#1A1C1E] rounded-2xl border border-[#2A2E30] p-8 md:p-12 min-h-[280px] flex flex-col justify-between">
+                <div className="bg-surface/60 backdrop-blur-md rounded-none border border-accent/20 p-10 md:p-16 min-h-[320px] w-full flex flex-col justify-between hover:border-accent/50 transition-colors duration-500">
                     <div>
-                        <Quote className="w-8 h-8 text-[#C2A35D]/20 mb-6" />
+                        <Quote className="w-10 h-10 text-accent/30 mb-8" />
                         <p
-                            className="text-[#EAE6DD]/80 font-light leading-relaxed text-base md:text-lg transition-opacity duration-500"
+                            className="text-primary/90 font-light leading-relaxed text-lg md:text-xl transition-opacity duration-500"
                             key={active}
                         >
                             &ldquo;{testimonials[active].text}&rdquo;
                         </p>
                     </div>
 
-                    <div className="mt-8 flex items-center justify-between">
+                    <div className="mt-12 flex items-center justify-between border-t border-accent/10 pt-6">
                         <div>
-                            <p className="text-[#EAE6DD] font-medium text-sm">
+                            <p className="text-primary font-medium text-base tracking-wide uppercase">
                                 {testimonials[active].name}
                             </p>
-                            <p className="text-[#A8A39B]/50 text-xs font-light mt-0.5">
+                            <p className="text-secondary/70 text-sm font-light mt-1">
                                 {testimonials[active].role}
                             </p>
                         </div>
-                        <div className="flex gap-1">
+                        <div className="flex gap-1.5 hidden sm:flex">
                             {Array.from({ length: 5 }).map((_, i) => (
                                 <span
                                     key={i}
-                                    className={`text-xs ${i < testimonials[active].rating
-                                            ? "text-[#C2A35D]"
-                                            : "text-[#2A2E30]"
+                                    className={`text-sm ${i < testimonials[active].rating
+                                        ? "text-accent"
+                                        : "text-surface"
                                         }`}
                                 >
                                     ★
@@ -106,14 +116,14 @@ export default function Testimonials() {
                 </div>
 
                 {/* Dots navigation */}
-                <div className="flex items-center justify-center gap-2 mt-8">
+                <div className="flex items-center justify-center gap-3 mt-12">
                     {testimonials.map((_, i) => (
                         <button
                             key={i}
                             onClick={() => setActive(i)}
-                            className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${i === active
-                                    ? "bg-[#C2A35D] w-6"
-                                    : "bg-[#2A2E30] hover:bg-[#C2A35D]/30"
+                            className={`h-[1px] transition-all duration-300 cursor-pointer ${i === active
+                                ? "bg-accent w-12"
+                                : "bg-surface w-6 hover:bg-accent/50"
                                 }`}
                             aria-label={`View testimonial ${i + 1}`}
                         />
