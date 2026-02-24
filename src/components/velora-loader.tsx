@@ -5,17 +5,28 @@ import { useEffect, useRef, useState } from "react";
 export default function VeloraLoader() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [visible, setVisible] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        // Only show loader on the very first visit per session
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (!mounted) return;
+
         const hasLoaded = sessionStorage.getItem("velora-loaded");
-        if (hasLoaded) return;
+
+        // Skip loader on first hard load
+        if (!hasLoaded) {
+            sessionStorage.setItem("velora-loaded", "true");
+            return;
+        }
 
         setVisible(true);
-        sessionStorage.setItem("velora-loaded", "true");
 
         const canvas = canvasRef.current;
         if (!canvas) return;
+
         const ctx = canvas.getContext("2d");
         if (!ctx) return;
 
@@ -28,24 +39,24 @@ export default function VeloraLoader() {
         const drops: number[] = Array(columns).fill(1);
 
         function draw() {
-            ctx!.fillStyle = "rgba(15,17,19,0.12)";
-            ctx!.fillRect(0, 0, canvas!.width, canvas!.height);
+            ctx.fillStyle = "rgba(15,17,19,0.12)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx!.fillStyle = "rgba(194,163,93,0.35)";
-            ctx!.font = `${fontSize}px monospace`;
+            ctx.fillStyle = "rgba(194,163,93,0.35)";
+            ctx.font = `${fontSize}px monospace`;
 
             for (let i = 0; i < drops.length; i++) {
                 const x = i * fontSize;
                 const centerZone =
-                    x > canvas!.width * 0.3 && x < canvas!.width * 0.7;
+                    x > canvas.width * 0.3 && x < canvas.width * 0.7;
 
                 if (!centerZone || Math.random() > 0.85) {
                     const text =
                         letters[Math.floor(Math.random() * letters.length)];
-                    ctx!.fillText(text, x, drops[i] * fontSize);
+                    ctx.fillText(text, x, drops[i] * fontSize);
                 }
 
-                if (drops[i] * fontSize > canvas!.height && Math.random() > 0.98) {
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
                     drops[i] = 0;
                 }
 
@@ -57,13 +68,13 @@ export default function VeloraLoader() {
 
         const timeout = setTimeout(() => {
             setVisible(false);
-        }, 1800);
+        }, 1200); // shorter = smoother UX
 
         return () => {
             clearInterval(interval);
             clearTimeout(timeout);
         };
-    }, []);
+    }, [mounted]);
 
     if (!visible) return null;
 
