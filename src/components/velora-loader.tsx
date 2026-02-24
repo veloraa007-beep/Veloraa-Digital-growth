@@ -27,7 +27,7 @@ export default function VeloraLoader() {
         const canvas = canvasRef.current;
         if (!canvas) return;
 
-        const ctx = canvas.getContext("2d");
+        const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
         if (!ctx) return;
 
         canvas.width = window.innerWidth;
@@ -40,7 +40,7 @@ export default function VeloraLoader() {
 
         function draw() {
             ctx.fillStyle = "rgba(15,17,19,0.12)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillRect(0, 0, canvas!.width, canvas!.height);
 
             ctx.fillStyle = "rgba(194,163,93,0.35)";
             ctx.font = `${fontSize}px monospace`;
@@ -48,7 +48,7 @@ export default function VeloraLoader() {
             for (let i = 0; i < drops.length; i++) {
                 const x = i * fontSize;
                 const centerZone =
-                    x > canvas.width * 0.3 && x < canvas.width * 0.7;
+                    x > canvas!.width * 0.3 && x < canvas!.width * 0.7;
 
                 if (!centerZone || Math.random() > 0.85) {
                     const text =
@@ -56,7 +56,7 @@ export default function VeloraLoader() {
                     ctx.fillText(text, x, drops[i] * fontSize);
                 }
 
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
+                if (drops[i] * fontSize > canvas!.height && Math.random() > 0.98) {
                     drops[i] = 0;
                 }
 
