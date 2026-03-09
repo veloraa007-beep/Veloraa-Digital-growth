@@ -3,31 +3,30 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function VeloraLoader() {
-    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [visible, setVisible] = useState(false);
-    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true);
-    }, []);
+        if (typeof window === "undefined") return;
 
-    useEffect(() => {
-        if (!mounted) return;
+        const alreadyLoaded = sessionStorage.getItem("velora-loaded");
 
-        const hasLoaded = sessionStorage.getItem("velora-loaded");
-
-        // Skip loader on first hard load
-        if (!hasLoaded) {
-            sessionStorage.setItem("velora-loaded", "true");
+        if (alreadyLoaded) {
+            setVisible(false);
             return;
         }
 
         setVisible(true);
+        sessionStorage.setItem("velora-loaded", "true");
+    }, []);
+
+    useEffect(() => {
+        if (!visible) return;
 
         const canvas = canvasRef.current;
         if (!canvas) return;
 
-        const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
+        const ctx = canvas.getContext("2d");
         if (!ctx) return;
 
         canvas.width = window.innerWidth;
@@ -38,43 +37,36 @@ export default function VeloraLoader() {
         const columns = Math.floor(canvas.width / fontSize);
         const drops: number[] = Array(columns).fill(1);
 
-        function draw() {
-            ctx.fillStyle = "rgba(15,17,19,0.12)";
-            ctx.fillRect(0, 0, canvas!.width, canvas!.height);
+        const draw = () => {
+            ctx.fillStyle = "rgba(15,17,19,0.15)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             ctx.fillStyle = "rgba(194,163,93,0.35)";
             ctx.font = `${fontSize}px monospace`;
 
             for (let i = 0; i < drops.length; i++) {
-                const x = i * fontSize;
-                const centerZone =
-                    x > canvas!.width * 0.3 && x < canvas!.width * 0.7;
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-                if (!centerZone || Math.random() > 0.85) {
-                    const text =
-                        letters[Math.floor(Math.random() * letters.length)];
-                    ctx.fillText(text, x, drops[i] * fontSize);
-                }
-
-                if (drops[i] * fontSize > canvas!.height && Math.random() > 0.98) {
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.98) {
                     drops[i] = 0;
                 }
-
                 drops[i]++;
             }
-        }
+        };
 
-        const interval = setInterval(draw, 55);
+        const interval = setInterval(draw, 50);
 
         const timeout = setTimeout(() => {
             setVisible(false);
-        }, 1200); // shorter = smoother UX
+            clearInterval(interval);
+        }, 1600);
 
         return () => {
             clearInterval(interval);
             clearTimeout(timeout);
         };
-    }, [mounted]);
+    }, [visible]);
 
     if (!visible) return null;
 
@@ -82,7 +74,7 @@ export default function VeloraLoader() {
         <div className="fixed inset-0 bg-[#0F1113] flex items-center justify-center z-[9999]">
             <canvas
                 ref={canvasRef}
-                className="absolute inset-0 blur-[0.5px]"
+                className="absolute inset-0 opacity-40"
             />
 
             <h1 className="relative text-5xl md:text-6xl font-serif text-[#C2A35D] tracking-[8px]">
