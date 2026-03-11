@@ -71,6 +71,20 @@ export default function Hero() {
                         </MagneticButton>
                     </Link>
                 </div>
+
+                {/* 60% Discount Notice */}
+                <div className="mt-8 flex justify-center w-full">
+                    <Link
+                        href="/launch"
+                        className="group relative inline-flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 rounded-full border border-[#C2A35D]/40 bg-[#C2A35D]/5 backdrop-blur-md overflow-hidden transition-all duration-500 hover:border-[#C2A35D]"
+                    >
+                        <div className="absolute inset-0 bg-[#C2A35D] opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+                        <span className="relative z-10 text-[10px] sm:text-xs uppercase tracking-[0.25em] font-bold text-[#EAE6DD] group-hover:text-[#C2A35D] transition-colors duration-300">
+                            Unlock 60% Launch Discount
+                        </span>
+                        <div className="relative z-10 w-2 h-2 rounded-full bg-[#C2A35D] shadow-[0_0_8px_#C2A35D] animate-pulse" />
+                    </Link>
+                </div>
             </div>
 
             {/* Scroll Indicator */}
