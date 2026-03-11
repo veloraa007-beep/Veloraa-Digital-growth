@@ -88,20 +88,20 @@ export default function LaunchPage() {
             href="https://api.whatsapp.com/send/?phone=919901981097&text=I%20want%20to%20unlock%20launch%20discounts!&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative w-full sm:w-auto flex items-center justify-center px-8 py-4 bg-[#C2A35D]/10 border border-[#C2A35D] text-[#C2A35D] text-sm font-bold uppercase tracking-[0.2em] transition-all duration-500 hover:bg-[#C2A35D] hover:text-black overflow-hidden"
+            className="group relative w-full sm:w-auto flex items-center justify-center px-6 py-4 bg-[#C2A35D]/10 border border-[#C2A35D] text-[#C2A35D] text-xs sm:text-sm font-bold uppercase tracking-[0.2em] transition-all duration-500 hover:bg-[#C2A35D] hover:text-black overflow-hidden text-center max-w-[280px] sm:max-w-none mx-auto"
           >
             <div className="absolute inset-0 bg-[#C2A35D] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-20 blur-md bg-[#C2A35D] transition-opacity duration-500" />
-            <span className="relative z-10 whitespace-nowrap">Unlock Launch Discounts</span>
+            <span className="relative z-10 leading-relaxed">Unlock Launch Discounts</span>
           </a>
 
           <a
             href="https://api.whatsapp.com/send/?phone=919901981097&text=I%27d%20like%20to%20book%20a%20strategy%20call.&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto text-center px-8 py-4 border border-white/10 text-[#EAE6DD]/70 text-sm font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:border-white/30 hover:text-white bg-[#141618]/50 overflow-hidden"
+            className="w-full sm:w-auto text-center px-6 py-4 border border-white/10 text-[#EAE6DD]/70 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:border-white/30 hover:text-white bg-[#141618]/50 overflow-hidden max-w-[280px] sm:max-w-none mx-auto"
           >
-            <span className="whitespace-nowrap">Book Strategy Call</span>
+            <span className="leading-relaxed">Book Strategy Call</span>
           </a>
         </motion.div>
 
