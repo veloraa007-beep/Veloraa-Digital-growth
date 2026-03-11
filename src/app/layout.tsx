@@ -7,7 +7,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import CookieConsent from "@/components/cookie-consent";
 import FloatingWhatsApp from "@/components/floating-whatsapp";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import VeloraLoader from "@/components/velora-loader";
 
 // Refined Sans-Serif for Body, Navigation, Buttons
