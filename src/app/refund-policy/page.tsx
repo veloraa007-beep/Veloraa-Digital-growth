@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import { ArrowLeft, AlertTriangle, Clock, RefreshCw } from "lucide-react";
+import { ArrowLeft, AlertTriangle, Clock, RefreshCw, Shield, FileText } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Refund & Cancellation Policy — Velora",
@@ -111,6 +111,38 @@ export default function RefundPolicy() {
                                 protect both our clients and the integrity of
                                 our work.
                             </p>
+
+                            {/* ₹800 Non-Refundable Fee Callout */}
+                            <div className="bg-[#C2A35D]/5 rounded-xl border border-[#C2A35D]/20 p-6 mt-6">
+                                <h3 className="text-[#C2A35D] font-serif font-semibold text-base mb-3">
+                                    ₹800 Non-Refundable Project Initiation Fee
+                                </h3>
+                                <p className="text-sm text-[#EAE6DD]/70 leading-relaxed mb-4">
+                                    If a client requests a refund after payment has been made,{" "}
+                                    <span className="text-[#EAE6DD] font-medium">₹800 will be retained</span>{" "}
+                                    as a non-refundable project initiation and consultation fee. This amount is deducted from any applicable refund.
+                                </p>
+                                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#C2A35D]/60 mb-3">
+                                    This fee covers:
+                                </p>
+                                <ul className="space-y-2 text-sm">
+                                    {[
+                                        "Initial project consultation and requirement gathering",
+                                        "Strategy session and project scope analysis",
+                                        "Resource allocation and team onboarding",
+                                        "Administrative processing and project setup costs",
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-3">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-[#C2A35D]/40 mt-1.5 shrink-0" />
+                                            <span className="text-[#A8A39B]/80">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <p className="text-sm text-[#A8A39B]/60 mt-4 leading-relaxed">
+                                    This fee applies regardless of project stage and is non-negotiable, as it compensates for work already completed during the intake and planning phases.
+                                </p>
+                            </div>
+
                             <div className="bg-[#1A1C1E] rounded-xl border border-[#2A2E30] p-5 mt-6">
                                 <div className="flex items-start gap-3">
                                     <AlertTriangle className="w-4 h-4 text-[#C2A35D]/60 mt-0.5 shrink-0" />
@@ -370,6 +402,26 @@ export default function RefundPolicy() {
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </section>
+
+                    {/* Related Policies */}
+                    <section className="pt-4">
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Link
+                                href="/privacy-policy"
+                                className="flex-1 flex items-center justify-center gap-3 px-6 py-4 border border-[#2A2E30] rounded-xl text-[#EAE6DD] text-xs font-bold uppercase tracking-[0.15em] hover:border-[#C2A35D]/30 hover:bg-[#C2A35D]/5 transition-all duration-300"
+                            >
+                                <Shield className="w-3.5 h-3.5 text-[#C2A35D]/50" />
+                                Privacy Policy
+                            </Link>
+                            <Link
+                                href="/terms"
+                                className="flex-1 flex items-center justify-center gap-3 px-6 py-4 border border-[#2A2E30] rounded-xl text-[#EAE6DD] text-xs font-bold uppercase tracking-[0.15em] hover:border-[#C2A35D]/30 hover:bg-[#C2A35D]/5 transition-all duration-300"
+                            >
+                                <FileText className="w-3.5 h-3.5 text-[#C2A35D]/50" />
+                                Terms of Service
+                            </Link>
                         </div>
                     </section>
                 </div>

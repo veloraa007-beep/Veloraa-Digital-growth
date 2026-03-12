@@ -13,6 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: "/contact", priority: 0.7, changeFrequency: "monthly" as const },
         { url: "/work", priority: 0.8, changeFrequency: "weekly" as const },
         { url: "/infrastructure", priority: 0.7, changeFrequency: "monthly" as const },
+        { url: "/what-is-velora", priority: 0.8, changeFrequency: "monthly" as const },
+        { url: "/company", priority: 0.8, changeFrequency: "monthly" as const },
+        { url: "/brand-transparency", priority: 0.6, changeFrequency: "monthly" as const },
+        { url: "/trust", priority: 0.6, changeFrequency: "monthly" as const },
+        { url: "/faq", priority: 0.7, changeFrequency: "monthly" as const },
     ];
 
     // Service pages

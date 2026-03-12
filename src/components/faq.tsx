@@ -5,36 +5,36 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
     {
-        q: "What services does Velora offer?",
-        a: "We specialize in premium website development, SaaS platform engineering, WhatsApp automation, SEO optimization, digital identity systems, lead funnels, and NFC/paper business cards. Every solution is custom-engineered — no templates.",
+        q: "What is VELORA?",
+        a: "VELORA is a digital infrastructure studio that builds secure, scalable, and automated digital systems for businesses. We go beyond traditional web design — we architect complete growth infrastructure including websites, automation pipelines, security layers, and conversion-optimized funnels designed for long-term dominance.",
     },
     {
-        q: "How long does a typical project take?",
-        a: "Timelines vary by scope. A premium website typically takes 2–4 weeks, while SaaS platforms and complex systems may take 6–12 weeks. We provide clear milestone schedules during onboarding.",
+        q: "What services does VELORA provide?",
+        a: "We specialize in premium website development, SaaS platform engineering, WhatsApp & email automation systems, SEO optimization, digital identity systems, lead generation funnels, and NFC/paper business cards. Every solution is custom-engineered with security-first principles — no templates, no shortcuts.",
     },
     {
-        q: "What is your pricing structure?",
-        a: "We offer transparent, tier-based pricing starting from growth plans for emerging brands to enterprise-level retainer programs. Visit our Pricing page for detailed breakdowns, or schedule a strategy call for a custom quote.",
+        q: "Who can work with VELORA?",
+        a: "We work with small businesses, clinics, startups, local service companies, and personal brands — anyone who needs a professional digital presence backed by real infrastructure. Whether you're launching your first website or scaling an existing business, Velora is built to meet you where you are.",
     },
     {
-        q: "Do you offer revisions?",
-        a: "Yes. Every project includes up to 2 complimentary revision rounds. Additional revisions can be accommodated at a nominal fee. We want you to love the final result.",
+        q: "How long does a project usually take?",
+        a: "Timelines vary by scope and complexity. A premium website typically takes 2–4 weeks, while SaaS platforms and complex automation systems may take 6–12 weeks. We provide clear milestone schedules during onboarding so you always know where your project stands.",
     },
     {
-        q: "What is your refund policy?",
-        a: "We follow a milestone-based refund structure. Refund eligibility depends on project completion stage — from 85% refund before work begins to 0% after final delivery. Full details are on our Refund Policy page.",
+        q: "How do I start a project with VELORA?",
+        a: "Simply reach out via our Contact page, WhatsApp, or email at veloraa007@gmail.com. We'll schedule a free strategy call to understand your needs, define project scope, and propose a tailored solution. From there, we handle everything — from planning to deployment.",
     },
     {
-        q: "Do you work with clients outside India?",
-        a: "Absolutely. We serve clients globally with seamless remote collaboration. Our infrastructure is built for asynchronous communication and timezone-flexible workflows.",
+        q: "Do you provide automation systems?",
+        a: "Yes. Automation is one of our core strengths. We build custom automation pipelines including WhatsApp auto-responses, email sequences, lead capture funnels, CRM integrations, and workflow automations — all designed to save you time and scale your operations without manual effort.",
     },
     {
-        q: "What technologies do you use?",
-        a: "Our core stack includes Next.js, React, TypeScript, and Tailwind CSS — deployed on Vercel's Edge Network. We also integrate GSAP for animations, Lenis for smooth scrolling, and custom automation pipelines.",
+        q: "What makes VELORA different from other agencies?",
+        a: "Most agencies focus on surface-level design. Velora focuses on infrastructure. Every project is built with cybersecurity-first architecture, scalable backend systems, and automation layers. We think like engineers, not decorators — and that's what gives our clients a lasting competitive advantage.",
     },
     {
-        q: "How do I get started?",
-        a: "Simply reach out via our Contact page, WhatsApp, or email at veloraa007@gmail.com. We'll schedule a free strategy call to understand your needs and propose a tailored solution.",
+        q: "Can VELORA help improve my existing website?",
+        a: "Absolutely. We offer website audits, performance optimization, security hardening, and complete redesigns. Whether your site needs faster load times, better SEO, a modern UI overhaul, or backend improvements, we can diagnose the issues and engineer the right solution.",
     },
 ];
 

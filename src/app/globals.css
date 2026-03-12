@@ -263,3 +263,10 @@ h6 {
 .gradient-mask-slow {
   animation: gradient-drift 12s ease-in-out infinite;
 }
+
+/* ─── Launch Page Hiding ─── */
+body.launch-page footer,
+body.launch-page [aria-label="Chat with Veloraa"],
+body.launch-page #cookie-consent {
+  display: none !important;
+}

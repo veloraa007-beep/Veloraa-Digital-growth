@@ -18,8 +18,8 @@ export default function Footer() {
                     </Link>
                 </div>
 
-                {/* Middle Grid (3 Columns) */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 mb-24">
+                {/* Middle Grid (4 Columns) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-16 md:gap-8 mb-24">
 
                     {/* Column 1: Links */}
                     <div>
@@ -44,7 +44,7 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 2: Services */}
+                    {/* Column 2: Architecture */}
                     <div>
                         <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-8">Architecture</h4>
                         <ul className="space-y-4">
@@ -66,7 +66,29 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 3: Contact */}
+                    {/* Column 3: Policies */}
+                    <div>
+                        <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-8">Policies</h4>
+                        <ul className="space-y-4">
+                            {[
+                                { label: "Privacy Policy", href: "/privacy-policy" },
+                                { label: "Refund Policy", href: "/refund-policy" },
+                                { label: "Terms & Conditions", href: "/terms" },
+                                { label: "FAQ", href: "/faq" },
+                            ].map((item) => (
+                                <li key={item.label}>
+                                    <Link
+                                        href={item.href}
+                                        className="text-secondary/60 hover:text-accent transition-colors text-sm font-light tracking-wide"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Column 4: Contact */}
                     <div>
                         <h4 className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-accent/50 mb-8">Contact</h4>
                         <ul className="space-y-4 text-sm text-secondary/60 font-light tracking-wide">

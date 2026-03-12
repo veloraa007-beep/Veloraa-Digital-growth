@@ -92,60 +92,60 @@ export default function TermsAndConditions() {
                         </div>
                     </section>
 
-                    {/* 3. Service Terms */}
+                    {/* 3. Service Scope & Timelines */}
                     <section>
                         <h2 className="text-xl font-serif font-semibold text-[#EAE6DD] mb-4 flex items-center gap-3">
                             <span className="text-[#C2A35D]/30 font-light text-2xl">
                                 03
                             </span>
-                            Service Engagement Terms
+                            Service Scope & Timelines
                         </h2>
                         <div className="pl-10 space-y-4">
                             <p>
-                                All project engagements are governed by
-                                individual service agreements executed between
-                                Velora and the client. These terms cover:
+                                <strong>Service Scope:</strong> All project deliverables, features, and functionality will be strictly limited to what is explicitly defined in the agreed-upon project proposal or statement of work. Any requests outside this scope will require a separate agreement and may incur additional charges.
                             </p>
-                            <ul className="space-y-2 text-sm">
-                                {[
-                                    "Project scope, deliverables, and timelines",
-                                    "Payment terms and milestone schedules",
-                                    "Revision policies and change management",
-                                    "Ownership transfer upon full payment",
-                                    "Confidentiality and non-disclosure obligations",
-                                ].map((item, i) => (
-                                    <li
-                                        key={i}
-                                        className="flex items-start gap-3"
-                                    >
-                                        <span className="w-1 h-1 rounded-full bg-[#C2A35D]/40 mt-2 shrink-0" />
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                            <p>
+                                <strong>Project Timelines:</strong> While we strive to deliver projects within the estimated timeframes, timelines are dependent on timely feedback, approvals, and content provision from the client. Delays on the client's end will proportionally extend the project delivery timeline.
+                            </p>
                         </div>
                     </section>
 
-                    {/* 4. User Representations */}
+                    {/* 4. Payment & Refund Policy */}
                     <section>
                         <h2 className="text-xl font-serif font-semibold text-[#EAE6DD] mb-4 flex items-center gap-3">
                             <span className="text-[#C2A35D]/30 font-light text-2xl">
                                 04
                             </span>
-                            User Representations
+                            Payment & Refund Policy
                         </h2>
-                        <div className="pl-10">
-                            <p className="mb-4">
-                                By using the site, you represent and warrant
-                                that:
+                        <div className="pl-10 space-y-4">
+                            <p>
+                                <strong>Payment Policy:</strong> Projects typically require an upfront deposit before work commences, with the balance due upon completion or according to specific project milestones defined in your proposal.
+                            </p>
+                            <p>
+                                <strong>Refund Rule:</strong> All projects are subject to a strict <strong>₹800 non-refundable project initiation and consultation fee</strong>. This fee covers initial strategy, resource allocation, and setup, and will be deducted from any eligible refunds if a cancellation occurs. Refunds for subsequent milestones will only be granted for work that has not yet been initiated or completed.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* 5. Client Responsibilities */}
+                    <section>
+                        <h2 className="text-xl font-serif font-semibold text-[#EAE6DD] mb-4 flex items-center gap-3">
+                            <span className="text-[#C2A35D]/30 font-light text-2xl">
+                                05
+                            </span>
+                            Client Responsibilities
+                        </h2>
+                        <div className="pl-10 space-y-4">
+                            <p>
+                                For the successful and timely completion of the project, clients are expected to:
                             </p>
                             <ul className="space-y-2 text-sm">
                                 {[
-                                    "All information you submit is accurate, current, and complete",
-                                    "You have the legal capacity to enter into these terms",
-                                    "You will not access the site through automated or non-human means",
-                                    "You will not use the site for any unauthorized or illegal purpose",
-                                    "Your use will comply with all applicable laws and regulations",
+                                    "Provide required content, assets, and approvals within the agreed timeframes.",
+                                    "Ensure all provided materials (images, text) do not infringe on third-party copyrights.",
+                                    "Designate a primary decision-maker to prevent conflicting feedback.",
+                                    "Communicate clearly and constructively throughout the development cycle."
                                 ].map((item, i) => (
                                     <li
                                         key={i}
@@ -159,11 +159,11 @@ export default function TermsAndConditions() {
                         </div>
                     </section>
 
-                    {/* 5. Limitation of Liability */}
+                    {/* 6. Limitation of Liability */}
                     <section>
                         <h2 className="text-xl font-serif font-semibold text-[#EAE6DD] mb-4 flex items-center gap-3">
                             <span className="text-[#C2A35D]/30 font-light text-2xl">
-                                05
+                                06
                             </span>
                             Limitation of Liability
                         </h2>
@@ -179,11 +179,11 @@ export default function TermsAndConditions() {
                         </div>
                     </section>
 
-                    {/* 6. Governing Law */}
+                    {/* 7. Governing Law */}
                     <section>
                         <h2 className="text-xl font-serif font-semibold text-[#EAE6DD] mb-4 flex items-center gap-3">
                             <span className="text-[#C2A35D]/30 font-light text-2xl">
-                                06
+                                07
                             </span>
                             Governing Law & Jurisdiction
                         </h2>
@@ -202,11 +202,11 @@ export default function TermsAndConditions() {
                         </div>
                     </section>
 
-                    {/* 7. Modifications */}
+                    {/* 8. Modifications */}
                     <section>
                         <h2 className="text-xl font-serif font-semibold text-[#EAE6DD] mb-4 flex items-center gap-3">
                             <span className="text-[#C2A35D]/30 font-light text-2xl">
-                                07
+                                08
                             </span>
                             Modifications & Corrections
                         </h2>
@@ -221,11 +221,11 @@ export default function TermsAndConditions() {
                         </div>
                     </section>
 
-                    {/* 8. Contact */}
+                    {/* 9. Contact */}
                     <section>
                         <h2 className="text-xl font-serif font-semibold text-[#EAE6DD] mb-4 flex items-center gap-3">
                             <span className="text-[#C2A35D]/30 font-light text-2xl">
-                                08
+                                09
                             </span>
                             Contact
                         </h2>
