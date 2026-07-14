@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const pipeline = [
     { label: "Traffic", detail: "SEO, Ads, Social" },
     { label: "Landing Architecture", detail: "Optimized UI + Copy" },

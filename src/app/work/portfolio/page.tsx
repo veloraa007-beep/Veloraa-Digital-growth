@@ -119,6 +119,7 @@ export default function PortfolioPage() {
                                 <div className={styles.portraitLayer}>
                                     {/* Placeholder for portrait */}
                                     {/* <div className={styles.fakePortrait}></div> */}
+                                    {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img
                                         src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                                         alt="Portrait"

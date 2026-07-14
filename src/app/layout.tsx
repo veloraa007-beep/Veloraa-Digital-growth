@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/smooth-scroll";
-import CustomCursor from "@/components/ui/custom-cursor";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import CookieConsent from "@/components/cookie-consent";

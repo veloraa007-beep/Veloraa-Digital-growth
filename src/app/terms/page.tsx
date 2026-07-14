@@ -105,7 +105,7 @@ export default function TermsAndConditions() {
                                 <strong>Service Scope:</strong> All project deliverables, features, and functionality will be strictly limited to what is explicitly defined in the agreed-upon project proposal or statement of work. Any requests outside this scope will require a separate agreement and may incur additional charges.
                             </p>
                             <p>
-                                <strong>Project Timelines:</strong> While we strive to deliver projects within the estimated timeframes, timelines are dependent on timely feedback, approvals, and content provision from the client. Delays on the client's end will proportionally extend the project delivery timeline.
+                                <strong>Project Timelines:</strong> While we strive to deliver projects within the estimated timeframes, timelines are dependent on timely feedback, approvals, and content provision from the client. Delays on the client&apos;s end will proportionally extend the project delivery timeline.
                             </p>
                         </div>
                     </section>

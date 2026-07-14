@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Shield, Server, Cloud, Lock, Zap, Globe } from "lucide-react";
+import { Shield, Cloud, Zap, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Infrastructure | Veloraa — Digital Growth Operating System",

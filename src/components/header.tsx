@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -13,7 +12,6 @@ const navLinks = [
     { name: "Services", href: "/services" },
     { name: "Work", href: "/work" },
     { name: "Pricing", href: "/pricing" },
-    { name: "Launch", href: "/launch" },
 ];
 
 export default function Header() {
@@ -28,6 +26,7 @@ export default function Header() {
 
     // Close mobile menu on route change
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMobileMenuOpen(false);
     }, [pathname]);
 

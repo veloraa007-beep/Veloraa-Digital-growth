@@ -12,6 +12,7 @@ export default function VeloraLoader() {
         const alreadyLoaded = sessionStorage.getItem("velora-loaded");
 
         if (alreadyLoaded) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setVisible(false);
             return;
         }

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Check, ArrowRight } from "lucide-react";
+import { ArrowLeft, Check } from "lucide-react";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 
 interface ProcessStep {

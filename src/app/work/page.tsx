@@ -147,6 +147,7 @@ export default function WorkPage() {
                                         ) : project.id === "restaurant" ? (
                                             // Restaurant Image Preview
                                             <div style={{ width: '100%', height: '100%', overflow: 'hidden', background: '#000' }}>
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img
                                                     src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2670&auto=format&fit=crop"
                                                     alt="Restaurant Food"
@@ -188,6 +189,7 @@ export default function WorkPage() {
                                         ) : project.id === "agency" ? (
                                             // Agency Dashboard Image Preview
                                             <div style={{ width: '100%', height: '100%', overflow: 'hidden', background: '#000' }}>
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img
                                                     src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop"
                                                     alt="AdSpace Dashboard"

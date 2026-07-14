@@ -1,6 +1,5 @@
 import ServicePageTemplate from "@/components/service-page-template";
 import ServiceCard from "@/components/service-card";
-import Image from "next/image";
 
 export default function PremiumWebsitesPage() {
     return (

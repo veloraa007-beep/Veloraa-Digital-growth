@@ -42,7 +42,7 @@ body {
   max-width: 100%;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-forest: var(--forest);

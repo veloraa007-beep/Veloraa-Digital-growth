@@ -30,7 +30,6 @@ export default function Footer() {
                                 { label: "Services", href: "/services" },
                                 { label: "Work", href: "/work" },
                                 { label: "Pricing", href: "/pricing" },
-                                { label: "Launch", href: "/launch" },
                             ].map((item) => (
                                 <li key={item.label}>
                                     <Link

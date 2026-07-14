@@ -1,7 +1,5 @@
 import ServicePageTemplate from "@/components/service-page-template";
-import Link from "next/link";
 import Image from "next/image";
-
 export default function PremiumDesignPage() {
     return (
         <ServicePageTemplate
@@ -81,7 +79,7 @@ export default function PremiumDesignPage() {
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-2xl font-serif text-white mb-6">Global Design Standards</h2>
                     <p className="text-secondary/60 text-sm mb-8 max-w-2xl mx-auto">
-                        We benchmark our work against the world's best. Explore the caliber of design we aspire to and exceed.
+                        We benchmark our work against the world&apos;s best. Explore the caliber of design we aspire to and exceed.
                     </p>
                     <a
                         href="https://dribbble.com/shots/popular/web-design"
