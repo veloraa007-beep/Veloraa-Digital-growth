@@ -251,10 +251,10 @@ export default function TermsAndConditions() {
                                     <p>
                                         Phone:{" "}
                                         <a
-                                            href="tel:+919901981097"
+                                            href="tel:+918550883051"
                                             className="text-[#EAE6DD] hover:text-[#C2A35D] transition-colors"
                                         >
-                                            +91 99019 81097
+                                            +91 85508 83051
                                         </a>
                                     </p>
                                 </div>

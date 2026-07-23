@@ -130,7 +130,7 @@ export default function InfrastructurePage() {
                         <span className="italic text-white/40 font-light">Infrastructure?</span>
                     </h2>
                     <a
-                        href="https://api.whatsapp.com/send/?phone=919901981097&text=Hi%20Velora%2C%20I%27d%20like%20to%20discuss%20infrastructure%20for%20my%20project.&type=phone_number&app_absent=0"
+                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block px-10 py-4 bg-accent text-black font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-colors"

@@ -28,7 +28,7 @@ export default function FloatingCTA() {
                     className="fixed bottom-8 right-8 z-50"
                 >
                     <a
-                        href="https://api.whatsapp.com/send/?phone=919901981097&text=Hi%20Velora%2C%20I%27d%20like%20to%20apply%20for%20a%20growth%20system.&type=phone_number&app_absent=0"
+                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center gap-2 px-5 py-3 bg-accent/90 hover:bg-accent text-black text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 shadow-[0_4px_20px_rgba(198,167,110,0.2)]"

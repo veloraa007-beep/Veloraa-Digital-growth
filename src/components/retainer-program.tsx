@@ -104,7 +104,7 @@ export default function RetainerProgram() {
                             </div>
 
                             <a
-                                href={`https://api.whatsapp.com/send/?phone=919901981097&text=Hi%20Velora%2C%20I'm%20interested%20in%20the%20${encodeURIComponent(tier.name)}%20retainer.&type=phone_number&app_absent=0`}
+                                href={"https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-auto block"

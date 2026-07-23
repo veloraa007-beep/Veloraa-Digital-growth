@@ -117,7 +117,7 @@ export default function ServiceTypeTemplate({
 
                         <motion.div variants={fadeIn} className="flex gap-4">
                             <a
-                                href="https://api.whatsapp.com/send/?phone=919901981097&text=I%27m+interested+in+this+service&type=phone_number&app_absent=0"
+                                href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="bg-accent text-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors"

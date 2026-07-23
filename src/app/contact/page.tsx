@@ -44,7 +44,7 @@ export default function Contact() {
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                     <a
-                        href="https://api.whatsapp.com/send/?phone=919901981097&text=Hi%20Velora%2C%20I%27d%20like%20to%20discuss%20a%20project.&type=phone_number&app_absent=0"
+                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative px-10 py-5 bg-accent/90 text-black overflow-hidden transition-all hover:bg-white min-w-[280px] backdrop-blur-sm"
@@ -68,8 +68,8 @@ export default function Contact() {
 
                 <div className="mt-24 pt-12 border-t border-white/5">
                     <p className="text-secondary/50 text-xs uppercase tracking-widest mb-4">Direct Line</p>
-                    <a href="tel:+919901981097" className="text-2xl md:text-3xl font-serif text-primary hover:text-accent transition-colors">
-                        +91 99019 81097
+                    <a href="tel:+918550883051" className="text-2xl md:text-3xl font-serif text-primary hover:text-accent transition-colors">
+                        +91 85508 83051
                     </a>
                     <p className="text-secondary/50 text-xs mt-4">Bangalore, India</p>
                 </div>

@@ -301,7 +301,7 @@ export default function RefundPolicy() {
                                 {[
                                     {
                                         step: "Contact Us",
-                                        desc: "Email veloraa007@gmail.com or call +91 99019 81097 with your project details and reason for cancellation.",
+                                        desc: "Email veloraa007@gmail.com or call +91 85508 83051 with your project details and reason for cancellation.",
                                     },
                                     {
                                         step: "Project Review",
@@ -394,10 +394,10 @@ export default function RefundPolicy() {
                                     <p>
                                         Phone:{" "}
                                         <a
-                                            href="tel:+919901981097"
+                                            href="tel:+918550883051"
                                             className="text-[#EAE6DD] hover:text-[#C2A35D] transition-colors"
                                         >
-                                            +91 99019 81097
+                                            +91 85508 83051
                                         </a>
                                     </p>
                                 </div>

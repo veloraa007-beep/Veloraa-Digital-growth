@@ -47,7 +47,7 @@ export default function PricingSingles() {
                 {SINGLES.map((item, i) => (
                     <a
                         key={i}
-                        href={`https://api.whatsapp.com/send/?phone=919901981097&text=Hi%20Velora%2C%20I%27m%20interested%20in%20the%20${encodeURIComponent(item.name)}.&type=phone_number&app_absent=0`}
+                        href={"https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative p-8 border border-white/5 bg-white/[0.01] hover:bg-white/[0.03] hover:border-white/10 transition-all duration-300 flex flex-col items-start gap-4"

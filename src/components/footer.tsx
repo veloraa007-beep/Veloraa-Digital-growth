@@ -97,8 +97,8 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="tel:+919901981097" className="hover:text-accent transition-colors">
-                                    +91 99019 81097
+                                <a href="tel:+918550883051" className="hover:text-accent transition-colors">
+                                    +91 85508 83051
                                 </a>
                             </li>
                             <li className="text-secondary/40 pt-2">
