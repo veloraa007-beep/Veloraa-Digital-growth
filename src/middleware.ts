@@ -78,7 +78,7 @@ const BLOCKED_UA_PATTERNS = [
     /attack/i,
 ];
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
     const ip =
         request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
