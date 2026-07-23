@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
                 allow: "/",
                 disallow: ["/api/", "/_next/", "/private/"],
             },
-            // Block aggressive bots & scrapers
+            // Explicitly allow AI and Search Bots for AEO/GEO
             {
                 userAgent: [
                     "GPTBot",
@@ -16,9 +16,15 @@ export default function robots(): MetadataRoute.Robots {
                     "CCBot",
                     "anthropic-ai",
                     "Google-Extended",
-                    "FacebookExternalHit",
-                    "Bytespider",
                     "ClaudeBot",
+                    "PerplexityBot",
+                ],
+                allow: "/",
+            },
+            // Block scrapers that provide no value
+            {
+                userAgent: [
+                    "Bytespider",
                 ],
                 disallow: "/",
             },

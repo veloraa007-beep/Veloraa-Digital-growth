@@ -2,15 +2,14 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { constructMetadata } from "@/lib/metadata";
+import Schema from "@/components/seo/schema";
 
-export const metadata: Metadata = {
+export const metadata = constructMetadata({
     title: "About — Velora | Digital Infrastructure Studio",
     description:
         "Velora is a digital infrastructure studio built to architect scalable, secure, and automated growth systems for ambitious businesses.",
-    alternates: {
-        canonical: "https://velora.digital/about",
-    },
-};
+});
 
 /* ── TESTIMONIALS DATA ── */
 const testimonials = [
@@ -58,7 +57,9 @@ const principles = [
 export default function AboutPage() {
     return (
         <main className="bg-[#0F1113] text-[#EAE6DD] overflow-x-hidden">
+            <Schema type="WebPage" data={{ name: "About Velora", description: "Learn about the architecture behind Velora." }} />
             {/* ═══════════════════════════════════════════════
+
                 1. HERO — CINEMATIC BUT CONTROLLED
             ═══════════════════════════════════════════════ */}
             <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden grain-overlay">

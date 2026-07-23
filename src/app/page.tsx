@@ -6,10 +6,19 @@ import FourPillars from "@/components/four-pillars";
 import TrustAuthoritySection from "@/components/trust-authority";
 import Testimonials from "@/components/testimonials";
 import StrategyCall from "@/components/strategy-call";
+import { constructMetadata } from "@/lib/metadata";
+import { LocalBusinessSchema } from "@/components/seo/schema";
+
+export const metadata = constructMetadata({
+  title: "Premium Digital Growth Infrastructure",
+  description:
+    "Velora builds high-performance, AI-optimized websites and digital infrastructure for premium brands. Transform your digital presence with our enterprise-grade systems.",
+});
 
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <LocalBusinessSchema />
       {/* ── HERO ── */}
       <Hero />
 

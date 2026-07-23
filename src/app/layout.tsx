@@ -8,6 +8,9 @@ import CookieConsent from "@/components/cookie-consent";
 import FloatingWhatsApp from "@/components/floating-whatsapp";
 import { Analytics } from "@vercel/analytics/react";
 import VeloraLoader from "@/components/velora-loader";
+import { constructMetadata } from "@/lib/metadata";
+import { OrganizationSchema } from "@/components/seo/schema";
+import AnalyticsScripts from "@/components/seo/analytics";
 
 // Refined Sans-Serif for Body, Navigation, Buttons
 const inter = Inter({
@@ -32,8 +35,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Velora",
-  description: "Digital Growth Infrastructure",
+  ...constructMetadata(),
+  verification: {
+    google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    other: {
+      "msvalidate.01": "YOUR_BING_VERIFICATION_CODE",
+    },
+  },
   icons: {
     icon: "/favicon.ico",
   },
@@ -50,6 +58,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${inter.variable} ${playfair.variable} antialiased selection:bg-accent selection:text-black bg-background text-primary overflow-x-hidden`}
       >
+        <OrganizationSchema />
+        <AnalyticsScripts />
         <VeloraLoader />
         <SmoothScroll>
           {/* <CustomCursor /> Removed for V2 "Restraint" */}
