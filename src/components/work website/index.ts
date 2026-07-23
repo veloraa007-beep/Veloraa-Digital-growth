@@ -11,3 +11,8 @@ export * from "./real-estate/RealEstateConfig";
 export { default as MaisonNoirLanding } from "./restaurant/MaisonNoirLanding";
 export { default as MaisonNoirHero } from "./restaurant/MaisonNoirHero";
 export * from "./restaurant/MaisonNoirConfig";
+
+// E-Commerce Luxury Flagship Experience (Atelier Vélora)
+export { default as AtelierLanding } from "./ecommerce/AtelierLanding";
+export { default as AtelierHero } from "./ecommerce/AtelierHero";
+export * from "./ecommerce/AtelierConfig";
