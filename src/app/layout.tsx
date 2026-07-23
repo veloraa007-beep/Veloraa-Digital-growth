@@ -37,7 +37,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   ...constructMetadata(),
   verification: {
-    google: "9fd6cd1ca894d998",
+    google: "HFNn_2zjbleXzOh7AmowXswnyXegNcokCN58nY1SdH0",
     other: {
       "msvalidate.01": "YOUR_BING_VERIFICATION_CODE",
     },
