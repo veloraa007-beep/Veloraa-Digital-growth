@@ -1,20 +1,25 @@
 import Hero from "@/components/hero";
+import TrustBar from "@/components/trust-bar";
 import ProblemSection from "@/components/problem-section";
 import SystemArchitecture from "@/components/system-architecture";
 import FourPillars from "@/components/four-pillars";
+import TrustAuthoritySection from "@/components/trust-authority";
 import Testimonials from "@/components/testimonials";
 import StrategyCall from "@/components/strategy-call";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* ── AUTHORITY ── */}
+      {/* ── HERO ── */}
       <Hero />
+
+      {/* ── TRUST BAR (FIRST 5 SECONDS CREDIBILITY) ── */}
+      <TrustBar />
 
       {/* Breathing Space */}
       <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-accent/15 to-transparent my-10" />
 
-      {/* ── EDUCATION ── */}
+      {/* ── EDUCATION / PROBLEM ── */}
       <ProblemSection />
 
       {/* Breathing Space */}
@@ -28,6 +33,9 @@ export default function Home() {
 
       {/* ── FOUNDATION ── */}
       <FourPillars />
+
+      {/* ── AUTHORITY & ACCREDITATION ── */}
+      <TrustAuthoritySection />
 
       {/* Breathing Space */}
       <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent my-10" />

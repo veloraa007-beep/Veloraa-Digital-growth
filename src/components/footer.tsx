@@ -127,8 +127,12 @@ export default function Footer() {
                         <p className="text-[10px] sm:text-xs text-primary/80 font-sans uppercase tracking-[0.2em] font-medium">
                             &copy; {currentYear} Velora — Digital Growth Operating System™
                         </p>
-                        <p className="text-[9px] text-secondary/40 font-sans uppercase tracking-[0.15em]">
-                            Engineered in Bangalore
+                        <p className="text-[9px] text-secondary/40 font-sans uppercase tracking-[0.15em] flex flex-wrap gap-3 items-center">
+                            <span>MSME Registered Enterprise</span>
+                            <span>•</span>
+                            <span>Engineered in Bangalore, India</span>
+                            <span>•</span>
+                            <span>Security-First Infrastructure</span>
                         </p>
                     </div>
 
