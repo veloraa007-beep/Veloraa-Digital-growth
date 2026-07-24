@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function FloatingWhatsApp() {
     return (
         <motion.a
-            href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+            href={SITE_CONFIG.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ scale: 0, opacity: 0 }}

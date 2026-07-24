@@ -1,24 +1,21 @@
 import MagneticButton from "./ui/magnetic-button";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function StrategyCall() {
     return (
-        <section className="w-full px-6 md:px-12 lg:px-24 py-44 md:py-56 relative overflow-hidden bg-[#0a0b0c] flex items-center justify-center text-center">
-            {/* Extremely dark subtle background glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/[0.03] blur-[200px] rounded-full pointer-events-none" />
-
-            <div className="max-w-4xl mx-auto text-center relative z-10">
-                {/* Headline */}
-                <h2
-                    className="font-serif text-primary leading-[1.1] tracking-tight mb-16"
-                    style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}
-                >
-                    Ready for Structural<br />
-                    <span className="italic text-primary/50 font-extralight">Excellence?</span>
+        <section className="py-24 px-6 relative bg-background border-t border-white/5">
+            <div className="max-w-[800px] mx-auto text-center">
+                <span className="text-xs uppercase tracking-[0.2em] text-accent font-medium mb-4 block">
+                    Direct Access
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl text-primary font-light mb-6">
+                    Book a High-Growth Strategy Session
                 </h2>
-
-                {/* CTA */}
+                <p className="text-secondary/70 text-sm sm:text-base font-light mb-8 max-w-[600px] mx-auto">
+                    Speak directly with our senior system architects to map out your digital infrastructure, custom funnels, and automated pipeline.
+                </p>
                 <a
-                    href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                    href={SITE_CONFIG.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                 >

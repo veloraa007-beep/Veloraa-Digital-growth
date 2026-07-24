@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -101,7 +102,7 @@ export default function Header() {
                     {/* CTA & MOBILE TOGGLE */}
                     <div className="flex items-center">
                         <motion.a
-                            href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                            href={SITE_CONFIG.whatsappUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.02, backgroundColor: "rgba(198,167,94,0.05)", borderColor: "rgba(198,167,94,0.4)" }}
@@ -182,7 +183,7 @@ export default function Header() {
                                 className="mt-12 relative z-10 w-full px-4 max-w-sm"
                             >
                                 <a
-                                    href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                                    href={SITE_CONFIG.whatsappUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="border border-accent/30 text-accent px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] hover:bg-accent hover:text-black transition-all duration-500 w-full block text-center"

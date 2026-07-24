@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import MagneticButton from "./ui/magnetic-button";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Hero() {
     return (
@@ -51,7 +52,7 @@ export default function Hero() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full">
                     <a
-                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                        href={SITE_CONFIG.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto"
