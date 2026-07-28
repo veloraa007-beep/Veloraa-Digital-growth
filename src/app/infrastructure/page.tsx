@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Shield, Cloud, Zap, Globe } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
     title: "Infrastructure | Veloraa — Digital Growth Operating System",
@@ -130,7 +131,7 @@ export default function InfrastructurePage() {
                         <span className="italic text-white/40 font-light">Infrastructure?</span>
                     </h2>
                     <a
-                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                        href={SITE_CONFIG.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block px-10 py-4 bg-accent text-black font-bold uppercase tracking-[0.2em] text-xs hover:bg-white transition-colors"

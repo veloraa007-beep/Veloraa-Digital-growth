@@ -47,7 +47,7 @@ Base: ${BASE_NAME} (₹${BASE_PRICE})
 Add-ons: ${selectedNames || "None"}
 Total Estimate: ₹${grandTotal}
 `;
-        return "https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0";
+        return `https://wa.me/918550883051?text=${encodeURIComponent(message)}`;
     };
 
     return (

@@ -192,7 +192,7 @@ export default function MaisonNoirLanding() {
                     </div>
 
                     <a
-                        href={`https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0`}
+                        href={"https://wa.me/918550883051"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-block px-10 py-5 bg-[#D4AF37] text-black font-bold uppercase tracking-[0.2em] text-xs rounded hover:bg-[#F3E5AB] transition-all shadow-xl shadow-[#D4AF37]/20"

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import Schema from "@/components/seo/schema";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata = constructMetadata({
     title: "About — Velora | Digital Infrastructure Studio",
@@ -683,7 +684,7 @@ export default function AboutPage() {
                     </h2>
 
                     <a
-                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                        href={SITE_CONFIG.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 px-10 py-4 border-2 border-[#C2A35D]/50 text-[#C2A35D] text-xs font-bold uppercase tracking-[0.2em] hover:bg-[#C2A35D] hover:text-black transition-all duration-300 rounded-lg"

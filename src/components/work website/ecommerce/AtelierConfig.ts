@@ -3,7 +3,7 @@ export const ATELIER_CONFIG = {
     tagline: "Haute Couture · Architectural Tailoring · Limited Edition Drops",
     collectionName: "CAPSULE N°07 // THE SHADOW LINE",
     phone: "+91 85508 83051",
-    whatsappLink: "https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0",
+    whatsappLink: "https://wa.me/918550883051",
     
     stats: [
         { value: "50", label: "Numbered Pieces", sub: "Worldwide limited release" },

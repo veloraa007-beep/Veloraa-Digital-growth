@@ -26,7 +26,7 @@ export default function DrivingSchoolHero() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                     <a
-                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                        href="https://wa.me/918550883051"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full sm:w-auto px-8 py-4 bg-emerald-400 text-black font-semibold tracking-wider uppercase text-sm rounded-lg hover:bg-emerald-300 transition-all duration-300 shadow-lg shadow-emerald-950/50"

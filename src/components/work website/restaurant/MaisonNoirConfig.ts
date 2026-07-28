@@ -5,7 +5,7 @@ export const MAISON_NOIR_CONFIG = {
     michelinStars: "3 Michelin Stars ✦ 2024–2026",
     tagline: "An Orchestration of Shadow, Fire & Botanical Precision",
     phone: "+91 85508 83051",
-    whatsappLink: "https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0",
+    whatsappLink: "https://wa.me/918550883051",
     
     branding: {
         bg: "#080706",

@@ -93,7 +93,7 @@ export default function DrivingSchoolLanding() {
                             </div>
 
                             <a
-                                href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                                href="https://wa.me/918550883051"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={`w-full py-3 text-center rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${
@@ -141,7 +141,7 @@ export default function DrivingSchoolLanding() {
                     Speak directly with an Apex Master Instructor on WhatsApp and schedule your first behind-the-wheel session today.
                 </p>
                 <a
-                    href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                    href="https://wa.me/918550883051"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-10 py-5 bg-emerald-400 text-black font-bold uppercase tracking-widest text-xs rounded-lg hover:bg-emerald-300 transition-colors shadow-2xl shadow-emerald-950"

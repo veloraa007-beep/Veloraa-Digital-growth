@@ -104,7 +104,7 @@ export default function RetainerProgram() {
                             </div>
 
                             <a
-                                href={"https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"}
+                                href={"https://wa.me/918550883051"}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-auto block"

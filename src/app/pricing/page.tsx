@@ -7,6 +7,7 @@ import PricingBuilder from "@/components/pricing-builder";
 import GlassCard from "@/components/ui/glass-card";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function PricingPage() {
     return (
@@ -71,7 +72,7 @@ export default function PricingPage() {
                                 </p>
 
                                 <a
-                                    href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                                    href={SITE_CONFIG.whatsappUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >

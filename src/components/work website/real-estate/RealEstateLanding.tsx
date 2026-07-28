@@ -27,7 +27,7 @@ export default function RealEstateLanding() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
                         <a
-                            href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                            href="https://wa.me/918550883051"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full sm:w-auto px-8 py-4 bg-amber-400 text-black font-bold tracking-widest uppercase text-xs rounded hover:bg-amber-300 transition-all duration-300 shadow-xl shadow-amber-950/50"
@@ -102,7 +102,7 @@ export default function RealEstateLanding() {
                                 </p>
 
                                 <a
-                                    href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                                    href="https://wa.me/918550883051"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block w-full py-3 text-center border border-amber-900/60 text-amber-300 hover:bg-amber-400 hover:text-black transition-all text-xs uppercase tracking-widest font-semibold rounded"
@@ -124,7 +124,7 @@ export default function RealEstateLanding() {
                     Connect directly with our luxury real estate portfolio director on WhatsApp for off-market listings.
                 </p>
                 <a
-                    href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                    href="https://wa.me/918550883051"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block px-10 py-5 bg-amber-400 text-black font-bold uppercase tracking-widest text-xs rounded hover:bg-amber-300 transition-colors shadow-2xl shadow-amber-950"

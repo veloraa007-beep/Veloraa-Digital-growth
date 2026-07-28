@@ -3,7 +3,7 @@
 import React from "react";
 
 export default function CoffeeLanding() {
-    const whatsappLink = "https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0";
+    const whatsappLink = "https://wa.me/918550883051";
 
     return (
         <div className="bg-[#0D0B09] text-[#F3EFEA] min-h-screen font-sans selection:bg-[#C29B72] selection:text-black">

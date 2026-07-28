@@ -153,7 +153,7 @@ export default function ServicePageTemplate({
                     </h2>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                         <a
-                            href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                            href="https://wa.me/918550883051"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-accent text-black px-12 py-4 rounded-none text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors min-w-[200px]"

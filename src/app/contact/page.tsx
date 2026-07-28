@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowLeft, MessageCircle, Mail } from "lucide-react";
 import BackgroundSlideshow from "@/components/ui/background-slideshow";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Contact() {
     return (
@@ -44,7 +45,7 @@ export default function Contact() {
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                     <a
-                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                        href={SITE_CONFIG.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative px-10 py-5 bg-accent/90 text-black overflow-hidden transition-all hover:bg-white min-w-[280px] backdrop-blur-sm"

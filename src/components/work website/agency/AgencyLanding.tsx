@@ -3,7 +3,7 @@
 import React from "react";
 
 export default function AgencyLanding() {
-    const whatsappLink = "https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0";
+    const whatsappLink = "https://wa.me/918550883051";
 
     return (
         <div className="bg-[#05060A] text-[#E6E8F0] min-h-screen font-sans selection:bg-[#4F46E5] selection:text-white">

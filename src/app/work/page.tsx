@@ -147,7 +147,7 @@ export default function WorkPage() {
                             Explore Flagship Systems
                         </Link>
                         <a
-                            href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                            href="https://wa.me/918550883051"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.btnSecondary}
@@ -244,7 +244,7 @@ export default function WorkPage() {
                         Every system is engineered specifically for your brand's growth goals and target audience.
                     </p>
                     <a
-                        href="https://api.whatsapp.com/message/CSJUP7QRLQFYL1?autoload=1&app_absent=0"
+                        href="https://wa.me/918550883051"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`${styles.btnPrimary} ${styles.reveal}`}
